@@ -150,4 +150,10 @@ form button {
   width: 100%;
   padding: .7rem;
   border-radius: 10px;
+
+}
+
+#lightbox.hidden {
+  display: none !important;
+  pointer-events: none !important;
 }
