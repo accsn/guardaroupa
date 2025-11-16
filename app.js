@@ -36,12 +36,16 @@ function enableLightbox() {
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
 
-  document.querySelectorAll(".photo-stack img").forEach(img => {
-    img.addEventListener("click", () => {
-      lightboxImg.src = img.src;
-      lightbox.classList.remove("hidden");
-    });
+document.querySelectorAll(".photo-stack img").forEach(img => {
+  img.addEventListener("click", () => {
+    // Only open lightbox if the image actually loaded
+    if (!img.complete || img.naturalWidth === 0) return;
+
+    lightboxImg.src = img.src;
+    lightbox.classList.remove("hidden");
   });
+});
+
 
   lightbox.addEventListener("click", () => {
     lightbox.classList.add("hidden");
@@ -97,4 +101,5 @@ const orderField = document.getElementById("order-field");
 
 checkoutForm.addEventListener("submit", () => {
   orderField.value = cart.join(", ");
+
 });
