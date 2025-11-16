@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Suéter Verde",
+    "size": "M",
+    "description": "Quentinho, macio e quase novo.",
+    "photos": ["sueter1.jpg", "sueter2.jpg", "sueter3.jpg"]
+  },
+  {
+    "name": "Vestido Vermelho",
+    "size": "P",
+    "description": "Perfeito para dias quentes, tecido leve.",
+    "photos": ["vestido1.jpg", "vestido2.jpg"]
+  }
+]

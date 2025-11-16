@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guarda-Roupa da Anna</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fontes 70s -->
+  <link href="https://fonts.googleapis.com/css2?family=Cooper+Black&family=Kumbh+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1>Guarda-Roupa da Anna</h1>
+  <button id="cart-button">🛒 <span id="cart-count">0</span></button>
+</header>
+
+<main id="product-grid" class="product-grid">
+  <!-- Produtos serão gerados automaticamente -->
+</main>
+
+<!-- SACOLA -->
+<div id="cart-drawer" class="hidden">
+  <h2>Sua Sacola</h2>
+  <ul id="cart-items"></ul>
+
+  <form id="checkout-form" netlify>
+    <input type="text" name="name" placeholder="Seu nome" required />
+    <input type="text" name="contact" placeholder="Instagram ou WhatsApp…" required />
+    <textarea name="note" placeholder="Alguma observação?"></textarea>
+
+    <input type="hidden" name="order" id="order-field" />
+    <button type="submit">Enviar Pedido</button>
+  </form>
+
+  <button id="close-cart" class="close-btn">Fechar</button>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="hidden">
+  <img id="lightbox-img" src="" alt="" />
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
