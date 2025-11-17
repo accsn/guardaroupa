@@ -64,19 +64,22 @@ header h1 {
 }
 
 #cart-button {
-  position: absolute;
-  top: 1.2rem;
-  right: 1.6rem;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
 
   background: var(--yellow);
   border: 2px solid var(--deep-brown);
   color: var(--deep-brown);
 
   border-radius: 12px;
-  padding: .5rem .9rem;
+  padding: .6rem .9rem;
   font-size: 1.2rem;
+  font-weight: 600;
 
   box-shadow: 2px 2px 0 var(--deep-brown);
+  z-index: 3000;     /* so it stays above everything */
+  cursor: pointer;
 }
 
 /* PRODUCTS */
