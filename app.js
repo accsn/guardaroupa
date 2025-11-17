@@ -1,5 +1,6 @@
 let allProducts = [];
 let filteredProducts = [];
+let cart = [];
 
 const typeList = [
   "acessórios",
@@ -115,6 +116,7 @@ function createProductCard(product) {
           ? `<p class="description">${product.description}</p>`
           : ""
       }
+      <button class="add-to-cart">Adicionar à sacola</button>
     </div>
   `;
 
@@ -122,8 +124,60 @@ function createProductCard(product) {
     setupCarousel(card, images);
   }
 
+  // wire up "Adicionar à sacola"
+  const addBtn = card.querySelector(".add-to-cart");
+  addBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    addToCart(product);
+  });
+
   return card;
 }
+
+// ---------- CART LOGIC ----------
+
+function addToCart(product) {
+  cart.push(product);
+  updateCartCount();
+  renderCart();
+  openCartDrawer();
+}
+
+function updateCartCount() {
+  const countSpan = document.getElementById("cart-count");
+  countSpan.textContent = cart.length;
+}
+
+function renderCart() {
+  const list = document.getElementById("cart-items");
+  const orderField = document.getElementById("order-field");
+
+  list.innerHTML = "";
+
+  cart.forEach((item, index) => {
+    const li = document.createElement("li");
+    li.textContent = `${index + 1}. ${item.name} (${item.size || "U"})`;
+    list.appendChild(li);
+  });
+
+  // texto que vai pro Netlify
+  orderField.value = cart
+    .map((item, index) => `${index + 1}. ${item.name} - tamanho ${item.size || "U"}`)
+    .join("\n");
+}
+
+function openCartDrawer() {
+  const drawer = document.getElementById("cart-drawer");
+  drawer.classList.remove("hidden");
+  drawer.classList.add("open");
+}
+
+function closeCartDrawer() {
+  const drawer = document.getElementById("cart-drawer");
+  drawer.classList.remove("open");
+  drawer.classList.add("hidden");
+}
+
 
 // CAROUSEL LOGIC PER CARD
 function setupCarousel(card, images) {
@@ -173,5 +227,9 @@ document.getElementById("size-filter").addEventListener("change", (e) => {
 
   renderProducts();
 });
+
+// eventos do carrinho
+document.getElementById("cart-button").addEventListener("click", openCartDrawer);
+document.getElementById("close-cart").addEventListener("click", closeCartDrawer);
 
 loadProducts();
