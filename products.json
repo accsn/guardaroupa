@@ -38,10 +38,145 @@
   ],
   "description": "Vestido vermelho de poá, leve e rodadinho, com decote arredondado e alças largas super confortáveis. Tem um caimento fofíssimo e aquela cara de look fácil que resolve o dia inteiro.",
   "size": "G",
-  "available": false,
+  "available": true,
   "tags": [
     "vestido",
     "G"
+  ]
+},
+
+{
+  "name": "Moletom cinza Under Armour com capuz",
+  "photos": [
+    "hoodie-GG-underarmour-greypurple-01.jpg",
+    "hoodie-GG-underarmour-greypurple-02.jpg"
+  ],
+  "description": "Moletom cinza da Under Armour, super quentinho e confortável, com bolsão canguru e capuz ajustável. Tem logo grande na frente em roxo escuro, dando um toque esportivo bonito e discreto. Perfeito pra dias frios ou pra sair por aí no modo conforto.",
+  "size": "GG",
+  "available": true,
+  "tags": [
+    "moletom",
+    "GG"
+  ]
+},
+
+{
+  "name": "Moletom bordô Under Armour com capuz",
+  "photos": [
+    "hoodie-GG-underarmour-redppink-01.jpg",
+    "hoodie-GG-underarmour-redppink-02.jpg",
+    "hoodie-GG-underarmour-redppink-03.jpg",
+    "hoodie-GG-underarmour-redppink-04.jpg"
+  ],
+  "description": "Moletom bordô da Under Armour, macio e bem quentinho, com logo grande em tom claro na frente. Modelagem confortável, capuz ajustável e bolsão canguru — perfeito para quem ama aquele look esportivo e aconchegante ao mesmo tempo. Alguns defeitos cosméticos.",
+  "size": "GG",
+  "available": true,
+  "tags": [
+    "moletom",
+    "GG"
+  ]
+},
+
+{
+  "name": "Jaqueta preta Forever 21 com capuz",
+  "photos": [
+    "jacket-G-forever21-black-01.jpg",
+    "jacket-G-forever21-black-02.jpg",
+    "jacket-G-forever21-black-03.jpg"
+  ],
+  "description": "Jaqueta preta da Forever 21, levinha e super versátil, com capuz e fechamento por zíper. Possui barras e punhos com elástico para um caimento mais ajustado e bolsos laterais com zíper, ótimos para manter tudo seguro. Ideal para o dia a dia, para jogar por cima de qualquer look e ficar arrumadinha sem esforço.",
+  "size": "G",
+  "available": true,
+  "tags": [
+    "casaco",
+    "G"
+  ]
+},
+
+{
+  "name": "Suéter rosê Chenault",
+  "photos": [
+    "jumper-G-chenault-pink-01.jpg",
+    "jumper-G-chenault-pink-02.jpg"
+  ],
+  "description": "Suéter rosê da Chenault, super macia e confortável, com textura canelada e modelagem soltinha. É perfeita para dias mais frios, dando aquele ar casual e arrumadinho ao mesmo tempo. O tecido é leve, quentinho e muito agradável no corpo, ideal para usar com jeans, leggings ou por cima de uma camiseta básica.",
+  "size": "G",
+  "available": true,
+  "tags": [
+    "blusa",
+    "G"
+  ]
+},
+
+{
+  "name": "Blusa preta fleece Old Navy",
+  "photos": [
+    "jumper-G-oldnavy-preto-01.jpg",
+    "jumper-G-oldnavy-preto-02.jpg"
+  ],
+  "description": "Blusa preta em fleece da Old Navy, super quentinha e macia, perfeita para dias frios ou para ficar confortável em casa. O tecido é leve, mas retém bem o calor, e a modelagem soltinha deixa tudo mais aconchegante. Uma peça básica, versátil e fácil de combinar — vai bem com qualquer jeans, leggings ou até como segunda camada por baixo de casacos.",
+  "size": "G",
+  "available": true,
+  "tags": [
+    "blusa",
+    "G"
+  ]
+},
+
+{
+  "name": "Legging roxa Under Armour com bolso",
+  "photos": [
+    "leggings-GG-underarmour-darkpurple-01.jpg"
+  ],
+  "description": "Legging roxa da Under Armour, super confortável e com tecido encorpado, ideal tanto para atividades físicas quanto para o dia a dia. O modelo tem cintura bem alta que abraça a barriga com firmeza, além de bolsos laterais super práticos para levar celular ou chaves. É macia, resistente e tem aquele toque premium típico da marca.",
+  "size": "GG",
+  "available": true,
+  "tags": [
+    "calça",
+    "GG"
+  ]
+},
+
+{
+  "name": "Legging estampada astrológica (luas e sóis)",
+  "photos": [
+    "leggings-G-shein-stars-moon-01.jpg"
+  ],
+  "description": "Legging leve e super confortável com estampa astrológica de luas, sóis e estrelas em tons suaves. O tecido é macio e fresquinho, ideal para ficar em casa, dormir ou montar um look descontraído no dia a dia. Tem cós elástico que se ajusta bem ao corpo.",
+  "size": "G",
+  "available": true,
+  "tags": [
+    "calça",
+    "G"
+  ]
+},
+
+{
+  "name": "Shorts jeans dobradinho (tamanho 40)",
+  "photos": [
+    "shorts-40-jeans-01.jpg",
+    "shorts-40-jeans-02.jpg"
+  ],
+  "description": "Shorts jeans azul escuro com barra dobrada, aquele modelo clássico que combina com absolutamente tudo. O tecido é encorpado, confortável e resistente, com leve desgastado na cor que dá um visual moderno. Possui bolsos frontais e traseiros funcionais e fechamento por botão e zíper.",
+  "size": "M",
+  "available": true,
+  "tags": [
+    "calça",
+    "M"
+  ]
+},
+
+{
+  "name": "Shorts esportivo Under Armour azul-marinho",
+  "photos": [
+    "shorts-GG-underarmour-navy-01.jpg"
+  ],
+  "description": "Shorts esportivo Under Armour em azul-marinho, com elástico largo estampado na cintura e detalhe branco nas bordas. É leve, respirável e feito para máximo conforto — perfeito para treinos, caminhadas, viagens, ficar em casa ou simplesmente para quem gosta de roupa folgadinha e macia.\n\nO caimento é solto, o tecido é suave e seca rápido. Um clássico esportivo super versátil.",
+  "size": "GG",
+  "available": true,
+  "tags": [
+    "shorts",
+    "GG"
   ]
 }
 
