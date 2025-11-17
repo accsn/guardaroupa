@@ -178,6 +178,331 @@
     "shorts",
     "GG"
   ]
+},
+
+{
+  "name": "Short preto texturizado com camada dupla",
+  "photos": [
+    "shorts-G-shein-duplo-black-01.jpg",
+    "shorts-G-shein-duplo-black-02.jpg"
+  ],
+  "description": "Short preto super delicado, com tecido leve e camada dupla que dá movimento e evita transparência. A superfície tem aplicações em relevo (tipo poá texturizado), trazendo um charme extra sem esforço. O caimento é soltinho, confortável e bem feminino.\n\nIdeal para looks mais arrumadinhos, jantares, eventos ou até para usar casualmente com uma t-shirt básica. É versátil e tem aquela vibe arrumada sem tentar demais.",
+  "size": "G",
+  "available": true,
+  "tags": [
+    "shorts",
+    "G"
+  ]
+},
+
+{
+  "name": "Short preto soltinho com textura plissada",
+  "photos": [
+    "shorts-G-shein-franzido-black-03.jpg",
+    "shorts-G-shein-franzido-black-01.jpg",
+    "shorts-G-shein-franzido-black-02.jpg"
+  ],
+  "description": "Short preto confortável e estiloso, feito em tecido leve com textura plissada que dá movimento e um caimento fluido super bonito. Possui cintura elástica com amarração frontal, garantindo ajuste perfeito e muito conforto no dia a dia.\n\nÉ aquele short “vai com tudo”, ideal para montar looks fresquinhos no calor, combinar com cropped, t-shirts ou até usar como saída de praia. Leve, prático e muito versátil.",
+  "size": "G",
+  "available": true,
+  "tags": [
+    "shorts",
+    "G"
+  ]
+},
+
+{
+  "name": "Short Under Armour Azul Marinho com forro",
+  "photos": [
+    "shorts-G-underarmour-navy-01.jpg",
+    "shorts-G-underarmour-navy-02.jpg"
+  ],
+  "description": "Short esportivo azul marinho da Under Armour, modelo com forro interno, ideal para treinos, corridas ou uso casual. Cós com ajuste por cordão, detalhe branco nas laterais e logo icônico da marca.\nLevinho, confortável e seca super rápido — perfeito para quem gosta de praticidade.",
+  "size": "G",
+  "available": true,
+  "tags": [
+    "shorts",
+    "G"
+  ]
+},
+
+{
+  "name": "Saia Toalha Off-White",
+  "photos": [
+    "skirt-G-oldnavy-towel-01.jpg"
+  ],
+  "description": "Saia estilo toalha em tom off-white, super macia e confortável. Possui cós elástico largo, caimento soltinho e tecido tipo felpa, perfeito para usar após o banho, na praia/piscina, ou simplesmente para ficar confortável em casa.\nPeça leve, prática e com carinha de saída de spa — zero complicação, só conforto.",
+  "size": "G",
+  "available": true,
+  "tags": [
+    "saia",
+    "G"
+  ]
+},
+
+{
+  "name": "Saia Midi Preta Texturizada",
+  "photos": [
+    "skirt-M-oldnavy-black.jpg"
+  ],
+  "description": "Saia preta com tecido texturizado e caimento soltinho, super confortável e versátil. Possui cós elástico e comprimento midi, perfeita para usar no dia a dia com camiseta básica ou montar um look mais arrumadinho.\nLeve, fresquinha e muito prática — daquelas peças que combinam com tudo.",
+  "size": "M",
+  "available": true,
+  "tags": [
+    "saia",
+    "M"
+  ]
+},
+
+{
+  "name": "Regata Bege Básica",
+  "photos": [
+    "tanktop-G-beige-01.jpg"
+  ],
+  "description": "Regata bege de alcinhas finas, tecido macio e levinho, perfeita para o dia a dia. Caimento soltinho e confortável, ótima para usar sozinha nos dias quentes ou como segunda camada por baixo de camisas e casacos.\nAquele básico indispensável que combina com tudo.",
+  "size": "G",
+  "available": true,
+  "tags": [
+    "blusa",
+    "G"
+  ]
+},
+
+{
+  "name": "Regata Esportiva Azul Marinho",
+  "photos": [
+    "tanktop-GG-navy-01.jpg"
+  ],
+  "description": "Regata esportiva azul marinho, modelo nadador, feita em tecido leve e respirável. Ótima para treinos, caminhadas ou dias quentes, com caimento soltinho que não prende nos movimentos.\nPeça super prática e confortável, perfeita para quem gosta de roupa fresquinha e funcional.",
+  "size": "GG",
+  "available": true,
+  "tags": [
+    "blusa",
+    "GG"
+  ]
+},
+
+{
+  "name": "Regata Preta Básica",
+  "photos": [
+    "tanktop-G-marisa-black-01.jpg",
+    "tanktop-G-marisa-black-02.jpg"
+  ],
+  "description": "Regata preta básica com decote V, em tecido leve e macio, perfeita para o dia a dia. Tem caimento soltinho, super confortável e fácil de combinar com qualquer look — desde short jeans até uma saia mais arrumadinha.\nPeça versátil, fresquinha e clássica, da linha Marisa Essencial.",
+  "size": "G",
+  "available": true,
+  "tags": [
+    "blusa",
+    "G"
+  ]
+},
+
+{
+  "name": "Camiseta Preta – GG (Chico Rei – Clube da Esquina)",
+  "photos": [
+    "tshirt-GG-chicorei-clubeesquina-01.jpg",
+    "tshirt-GG-chicorei-clubeesquina-02.jpg"
+  ],
+  "description": "Camiseta preta da Chico Rei, edição especial Clube da Esquina, com estampa artística em tons terrosos representando uma janela chuvosa e um cenário urbano vintage. A malha é macia, veste soltinha e confortável, com aquele ar alternativo e poeticamente mineiro que só a Chico Rei consegue.\nPerfeita para quem ama música, cultura brasileira e looks descolados.",
+  "size": "GG",
+  "available": true,
+  "tags": [
+    "camiseta",
+    "GG"
+  ]
+},
+
+{
+  "name": "Camiseta Preta – GG (Chico Rei – Hocus Pocus / Gato Preto)",
+  "photos": [
+    "tshirt-GG-chicorei-hocuspocus-01.jpg",
+    "tshirt-GG-chicorei-hocuspocus-02.jpg"
+  ],
+  "description": "Camiseta preta da Chico Rei com estampa temática Hocus Pocus, trazendo um gato preto estilizado diante de uma lua amarela, rodeado por pequenos brilhos mágicos. O desenho tem aquele charme bruxesco fofo, ótimo para quem ama Halloween o ano inteiro ou simplesmente adora gatos e estética mística.\nMalha macia, confortável e com caimento soltinho. Muito estilosa e fácil de combinar.",
+  "size": "GG",
+  "available": true,
+  "tags": [
+    "camiseta",
+    "GG"
+  ]
+},
+
+{
+  "name": "Camiseta Preta – GG molde feminino (Chico Rei – Je ne Regrette Rien)",
+  "photos": [
+    "tshirt-GG-chicorei-jeneregrette-01.jpg",
+    "tshirt-GG-chicorei-jeneregrette-02.jpg"
+  ],
+  "description": "Camiseta preta da Chico Rei com frase em francês bordada/estampada na frente: “Je ne regrette rien” — “Não me arrependo de nada”. O design é minimalista e chique, com tipografia delicada em tom claro que contrasta lindamente com o fundo preto.\nA malha é macia e confortável, vestindo soltinho, perfeita para quem gosta de looks simples com mensagem forte e vibe francesa.",
+  "size": "GG",
+  "available": true,
+  "tags": [
+    "camiseta",
+    "GG"
+  ]
+},
+
+{
+  "name": "Camiseta Preta – GG molde feminino (Nerd Universe – Evil Cat)",
+  "photos": [
+    "tshirt-GG-nerduniverse-evilcat-01.jpg",
+    "tshirt-GG-nerduniverse-evilcat-02.jpg"
+  ],
+  "description": "Camiseta preta da Nerd Universe com estampa de gatinho demoníaco fofo-malvado sentado num pentagrama estilizado. O desenho tem tons de cinza e vermelho, com detalhes brilhantes e a frase “Careful, I am evil” na base.\nÉ aquela peça divertida que mistura humor, estética dark e um toque de sarcasmo, perfeita para quem vive entre o “awww” e o “vou tacar fogo no mundo”.",
+  "size": "GG",
+  "available": true,
+  "tags": [
+    "camiseta",
+    "GG"
+  ]
+},
+
+{
+  "name": "Camiseta Off-White – GG (Nerd Universe – Herbology)",
+  "photos": [
+    "tshirt-GG-nerduniverse-herbology-01.jpg"
+  ],
+  "description": "Camiseta em tom off-white da Nerd Universe, com estampa temática de Herbology num estilo quase de manual ilustrado. Traz um conjunto de plantas mágicas, raízes, flores e até uns cogumelos suspeitos, tudo muito académico até o momento em que percebes que há uma mandrágora a te encarar no centro.\nÉ perfeita para quem gosta de fantasia, botânica inventada e a estética “aluna aplicada de Hogwarts, mas que cola no teste”.",
+  "size": "GG",
+  "available": true,
+  "tags": [
+    "camiseta",
+    "GG"
+  ]
+},
+
+{
+  "name": "Camiseta Preta – GG (Nerd Universe – Howl’s Moving Castle)",
+  "photos": [
+    "tshirt-GG-nerduniverse-howlscastle-01.jpg",
+    "tshirt-GG-nerduniverse-howlscastle-02.jpg"
+  ],
+  "description": "Camiseta preta da Nerd Universe, estampa inspirada em O Castelo Animado. Traz uma arte estilizada do castelo do Howl, com aquele ar meio caótico, meio mágico, sempre a ponto de desmoronar mas firme como um teimoso britânico sob chuva.\nA paleta junta verde-esmeralda, laranja queimado e branco — fica linda no tecido escuro — e tem detalhes em japonês que dão o charme otaku sem exagerar.\nÉ perfeita para quem ama Ghibli, fantasia e peças com vibe artística.",
+  "size": "GG",
+  "available": true,
+  "tags": [
+    "camiseta",
+    "GG"
+  ]
+},
+
+{
+  "name": "Camiseta Preta – GG (Nerd Universe – “How to Destroy Humans”)",
+  "photos": [
+    "tshirt-GG-nerduniverse-howtocat-01.jpg",
+    "tshirt-GG-nerduniverse-howtocat-02.jpg",
+    "tshirt-GG-nerduniverse-howtocat-03.jpg",
+    "tshirt-GG-nerduniverse-howtocat-04.jpg"
+  ],
+  "description": "Camiseta preta da Nerd Universe, com aquela vibe divertida e levemente maléfica que só um gatinho fofo tramando a queda da humanidade consegue transmitir. A estampa mostra um gato de olhos enormes lendo o manual “How to Destroy Humans”, rodeado por chamas estilizadas, estrelinhas mágicas e um crânio simpático a acompanhar o mood.\nPossui detalhes em rosa claro nas mangas e na gola, criando um contraste bem gracinha com o preto. Confortável, nerdy e cheia de personalidade — perfeita para quem aprecia humor sombrio, mas no estilo cartoon.",
+  "size": "GG",
+  "available": true,
+  "tags": [
+    "camiseta",
+    "GG"
+  ]
+},
+
+{
+  "name": "Camiseta Preta – GG (Nerd Universe – Nekomancer)",
+  "photos": [
+    "tshirt-GG-nerduniverse-nekomancer-01.jpg"
+  ],
+  "description": "Camiseta preta da Nerd Universe com estampa colorida de “Nekomancer”, mostrando um gatinho mago conjurando gatos fantasma. Vibe divertida, nerd e estilosa, perfeita para quem ama humor místico com felinos.",
+  "size": "GG",
+  "available": true,
+  "tags": [
+    "camiseta",
+    "GG"
+  ]
+},
+
+{
+  "name": "Camiseta preta “BRITNEY” (GG)",
+  "photos": [
+    "tshirt-GG-official-britney-01.jpg",
+    "tshirt-GG-official-britney-02.jpg",
+    "tshirt-GG-official-britney-03.jpg"
+  ],
+  "description": "Camiseta oficial com estampa da Britney sentada, bem icônica. A malha está em bom estado, porém as letras da estampa têm desgaste visível (um pouco levantadas/rachadinhas). Ainda assim, super estilosa para looks casuais.",
+  "size": "GG",
+  "available": true,
+  "tags": [
+    "camiseta",
+    "GG"
+  ]
+},
+
+{
+  "name": "Camiseta verde “Skull the Frog” – GG (oversized)",
+  "photos": [
+    "tshirt-GG-shein-frog-01.jpg",
+    "tshirt-GG-shein-frog-02.jpg"
+  ],
+  "description": "Modelo bem amplo, confortável e estiloso. Estampa delicada de sapo com flores e cogumelos, num verde oliva fácil de combinar. Perfeita para looks casuais e soltinhos.",
+  "size": "GG",
+  "available": true,
+  "tags": [
+    "camiseta",
+    "GG"
+  ]
+},
+
+{
+  "name": "Camiseta Harry Potter – G",
+  "photos": [
+    "tshirt-G-official-hpglasses-01.jpg"
+  ],
+  "description": "Vermelha com estampa dourada dos óculos e cicatriz do Harry. Produto oficial, leve e confortável. Perfeita para fãs.",
+  "size": "G",
+  "available": true,
+  "tags": [
+    "camiseta",
+    "G"
+  ]
+},
+
+{
+  "name": "Camiseta Shein Fantasminhas – G",
+  "photos": [
+    "tshirt-G-shein-beigeghosts-01.jpg"
+  ],
+  "description": "Bege clara com estampa fofa de vários fantasminhas. Tecido leve e macio, bem confortável.",
+  "size": "G",
+  "available": true,
+  "tags": [
+    "camiseta",
+    "G"
+  ]
+},
+
+{
+  "name": "Camiseta Chico Rei - Horror Cats – Unissex M",
+  "photos": [
+    "tshirt-M-chicorei-horrorcats-01.jpg"
+  ],
+  "description": "Preta com estampas dos “gatíneos” dos filmes de terror. Malha macia e veste soltinha.",
+  "size": "M",
+  "available": true,
+  "tags": [
+    "camiseta",
+    "M"
+  ]
+},
+
+{
+  "name": "Camiseta M. Officer - Game Boy – M",
+  "photos": [
+    "tshirt-M-mofficer-gameboy-01.jpg"
+  ],
+  "description": "Preta com estampa minimalista de Game Boy em branco. Modelagem soltinha e confortável.",
+  "size": "M",
+  "available": true,
+  "tags": [
+    "camiseta",
+    "M"
+  ]
 }
+
 
 ]
