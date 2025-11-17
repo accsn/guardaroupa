@@ -15,57 +15,15 @@ const typeList = [
 ];
 
 // LOAD PRODUCTS
-const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRUeQaOHqIS7jqchRbFdM9s7Y65jGWrvKDXvSGSxDqNx7ysuG58hzjHGTN_nsWyrxg-roS5vFESVyqD/pub?output=csv";
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbx26Vnebp1B38JAVFqcflNAHEvPVZFuT_wGY6lbuDDnhgz0ElTCfIMK-z7dQY8FB1E/exec";
 
-// Convert CSV to JSON
-function csvToJson(csv) {
-  const lines = csv.split("\n").filter(l => l.trim().length > 0);
-  const headers = lines[0].split(",").map(h => h.trim());
-
-  const items = [];
-
-  for (let i = 1; i < lines.length; i++) {
-    const row = [];
-    let current = "";
-    let insideQuotes = false;
-
-    // CSV parser that respects commas inside quotes
-    for (const char of lines[i]) {
-      if (char === '"') {
-        insideQuotes = !insideQuotes;
-        continue;
-      }
-      if (char === "," && !insideQuotes) {
-        row.push(current);
-        current = "";
-      } else {
-        current += char;
-      }
-    }
-    row.push(current);
-
-    const obj = {};
-    headers.forEach((h, idx) => {
-      obj[h] = row[idx] ? row[idx].trim() : "";
-    });
-
-    // Clean fields
-    obj.photos = obj.photos ? obj.photos.split(",").map(s => s.trim()) : [];
-    obj.tags = obj.tags ? obj.tags.split(",").map(s => s.trim()) : [];
-    obj.available = obj.available.trim().toUpperCase() === "TRUE";
-
-    items.push(obj);
-  }
-
-  return items;
-}
-
-// Load from Google Sheets!
+// LOAD PRODUCTS DIRECTLY FROM GOOGLE APPS SCRIPT (JSON, instant, no cache)
 async function loadProducts() {
   try {
-    const res = await fetch(SHEET_URL);
-    const csv = await res.text();
-    const data = csvToJson(csv);
+    const res = await fetch(SHEET_URL + "?t=" + Date.now());  
+    // ?t=Date.now() prevents browser caching
+
+    const data = await res.json();
 
     allProducts = data;
     filteredProducts = data;
@@ -74,12 +32,11 @@ async function loadProducts() {
     renderProducts();
 
   } catch (error) {
-    console.error("Erro ao carregar da planilha:", error);
+    console.error("Erro ao carregar via Apps Script:", error);
     document.getElementById("products-grid").innerHTML =
       "<p>Erro ao carregar produtos. Verifique sua conexão.</p>";
   }
 }
-
 
 // RENDER FILTER BUTTONS
 function renderFilters() {
