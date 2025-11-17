@@ -124,11 +124,17 @@ function createProductCard(product) {
     setupCarousel(card, images);
   }
 
-  // wire up "Adicionar à sacola"
+  // botão "Adicionar à sacola"
   const addBtn = card.querySelector(".add-to-cart");
   addBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     addToCart(product);
+  });
+
+  // >>> NEW: abrir lightbox ao clicar na foto
+  const mainImg = card.querySelector(".carousel-img");
+  mainImg.addEventListener("click", () => {
+    openLightbox(mainImg.src, product.name);
   });
 
   return card;
@@ -216,6 +222,23 @@ function setupCarousel(card, images) {
   });
 }
 
+// ---------- LIGHTBOX ----------
+
+function openLightbox(src, altText) {
+  const lightbox = document.getElementById("lightbox");
+  const img = document.getElementById("lightbox-img");
+
+  img.src = src;
+  img.alt = altText || "";
+  lightbox.classList.remove("hidden");
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById("lightbox");
+  lightbox.classList.add("hidden");
+}
+
+
 // SIZE FILTER
 document.getElementById("size-filter").addEventListener("change", (e) => {
   const selectedSize = e.target.value;
@@ -248,5 +271,16 @@ document.getElementById("size-filter").addEventListener("change", (e) => {
 // eventos do carrinho
 document.getElementById("cart-button").addEventListener("click", openCartDrawer);
 document.getElementById("close-cart").addEventListener("click", closeCartDrawer);
+
+// fechar lightbox clicando no fundo
+document.getElementById("lightbox").addEventListener("click", closeLightbox);
+
+// opcional: fechar com ESC
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeLightbox();
+  }
+});
+
 
 loadProducts();
