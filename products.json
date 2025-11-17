@@ -1,15 +1,12 @@
 [
   {
-    "name": "Suéter Verde",
-    "size": "M",
-    "description": "Quentinho, macio e quase novo.",
-    "photos": ["placeholder.png", "placeholder.png", "placeholder.png"]
-  },
-  {
-    "name": "Vestido Vermelho",
-    "size": "P",
-    "description": "Perfeito para dias quentes, tecido leve.",
-    "photos": ["placeholder.png", "placeholder.png"]
+    "name": "Camiseta G Nerduniverse – Nekomancer",
+    "photos": [
+      "tshirt-G-nerduniverse-nekomancer-01.jpg",
+      "tshirt-G-nerduniverse-nekomancer-02.jpg"
+    ],
+    "size": "G",
+    "available": true,
+    "tags": ["camiseta", "G"]
   }
-
 ]
