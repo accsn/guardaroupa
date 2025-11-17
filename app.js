@@ -15,7 +15,7 @@ const typeList = [
 ];
 
 // LOAD PRODUCTS
-const SHEET_URL = "https://script.google.com/macros/s/AKfycbx26Vnebp1B38JAVFqcflNAHEvPVZFuT_wGY6lbuDDnhgz0ElTCfIMK-z7dQY8FB1E/exec";
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbwbMsPCFYxSaRiYtIyoeIsvFxvqxqkPJ8-fC8UUMXz6CmzyaLvl8TS388GJ9kHbgWY/exec";
 
 // LOAD PRODUCTS DIRECTLY FROM GOOGLE APPS SCRIPT (JSON, instant, no cache)
 async function loadProducts() {
@@ -23,7 +23,8 @@ async function loadProducts() {
     const res = await fetch(SHEET_URL + "?t=" + Date.now());  
     // ?t=Date.now() prevents browser caching
 
-    const data = await res.json();
+    const text = await res.text();
+    const data = JSON.parse(text);
 
     allProducts = data;
     filteredProducts = data;
@@ -335,7 +336,7 @@ checkoutForm.addEventListener("submit", async (e) => {
   const orderText = document.getElementById("order-field").value;
 
   // Update your Google Sheet availability via Apps Script
-  fetch("https://script.google.com/macros/s/AKfycbyfXds7WeM_qfusoHW66TwB-tTlh8HZMzsJ470dAfGGFkaH2OvaTs4tt1lsK-upJqM/exec?order=" 
+  fetch("https://script.google.com/macros/s/AKfycbwbMsPCFYxSaRiYtIyoeIsvFxvqxqkPJ8-fC8UUMXz6CmzyaLvl8TS388GJ9kHbgWY/exec?order=" 
         + encodeURIComponent(orderText))
     .then(() => {
       alert("Pedido enviado! Vou ver e te respondo 💛");
