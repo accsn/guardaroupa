@@ -212,4 +212,12 @@ form button {
   margin-top: 0.4rem;
 }
 
+.photo-stack img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: zoom-in;
+}
 
