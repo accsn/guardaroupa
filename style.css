@@ -18,41 +18,29 @@ body {
 header {
   background: linear-gradient(to bottom, #8b5e34, #704425);
   color: var(--cream);
-  padding: 3rem 2rem 4rem;
+  padding: 1.7rem 2rem 2.3rem;  /* reduced significantly */
   text-align: center;
   position: relative;
-  border-bottom: 6px solid var(--orange);
+  border-bottom: 5px solid var(--orange);
 }
 
 /* Wavy effect */
 header::after {
   content: "";
   position: absolute;
-  bottom: -22px;
+  bottom: -16px;  /* moved up */
   left: 0;
   width: 100%;
-  height: 22px;
-
-  /* same brown as page background */
+  height: 16px;   /* smaller wave */
   background: var(--brown);
-
-  /* the magic shape */
   clip-path: polygon(
-    0 40%,
-    10% 60%,
-    20% 40%,
-    30% 60%,
-    40% 40%,
-    50% 60%,
-    60% 40%,
-    70% 60%,
-    80% 40%,
-    90% 60%,
-    100% 40%,
-    100% 100%,
-    0 100%
+    0 40%, 10% 60%, 20% 40%, 30% 60%,
+    40% 40%, 50% 60%, 60% 40%,
+    70% 60%, 80% 40%, 90% 60%,
+    100% 40%, 100% 100%, 0 100%
   );
 }
+
 
 header h1 {
   font-family: "Cooper Black", serif;
