@@ -212,17 +212,31 @@ form button {
   margin-top: 0.4rem;
 }
 
-.photo-stack img {
-  width: auto;               /* don't stretch horizontally */
-  max-width: 100%;           /* never exceed card width */
-  height: 250px;             /* fixed preview height */
-  object-fit: contain;       /* show the whole photo */
+/* CAROUSEL CONTAINER */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 260px; /* adjust as you like */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* MAIN IMAGE */
+.carousel-img {
+  max-height: 240px;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+
+  display: block;
+  margin: 0 auto;
   border-radius: 10px;
   cursor: zoom-in;
-  display: block;
-  margin: 0 auto;            /* center image */
-  background: #fff;          /* optional clean background */
-  padding: 8px;              /* optional spacing */
+
+  background: white;
+  padding: 6px; /* optional but helps with centering larger photos */
 }
 
 
