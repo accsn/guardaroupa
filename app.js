@@ -15,7 +15,7 @@ const typeList = [
 ];
 
 // LOAD PRODUCTS
-const SHEET_URL = "https://script.google.com/macros/s/AKfycbwbMsPCFYxSaRiYtIyoeIsvFxvqxqkPJ8-fC8UUMXz6CmzyaLvl8TS388GJ9kHbgWY/exec";
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbySmByFBnRaaXNTYxIER6Ek69YXdCj7m95eAA2ZJF7kDxJYP2A6vKVo5uRPleLoVSg/exec";
 
 // LOAD PRODUCTS DIRECTLY FROM GOOGLE APPS SCRIPT (JSON, instant, no cache)
 async function loadProducts() {
@@ -336,7 +336,7 @@ checkoutForm.addEventListener("submit", async (e) => {
   const orderText = document.getElementById("order-field").value;
 
   // Update your Google Sheet availability via Apps Script
-  fetch("https://script.google.com/macros/s/AKfycbwbMsPCFYxSaRiYtIyoeIsvFxvqxqkPJ8-fC8UUMXz6CmzyaLvl8TS388GJ9kHbgWY/exec?order=" 
+  fetch("https://script.google.com/macros/s/AKfycbySmByFBnRaaXNTYxIER6Ek69YXdCj7m95eAA2ZJF7kDxJYP2A6vKVo5uRPleLoVSg/exec?order=" 
         + encodeURIComponent(orderText))
     .then(() => {
       alert("Pedido enviado! Vou ver e te respondo 💛");
