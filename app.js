@@ -374,15 +374,25 @@ checkoutForm.addEventListener("submit", async (e) => {
     headers: { Accept: "application/json" }
   });
 
-  if (response.ok) {
-    alert("Pedido enviado! Vou ver e te respondo 💛");
-    cart = [];
-    updateCartCount();
-    renderCart();
-    closeCartDrawer();
-  } else {
-    alert("Ocorreu um erro ao enviar. Tenta de novo?");
-  }
+ if (response.ok) {
+  const orderText = document.getElementById("order-field").value;
+
+  // Update your Google Sheet availability via Apps Script
+  fetch("https://script.google.com/macros/s/AKfycbyfXds7WeM_qfusoHW66TwB-tTlh8HZMzsJ470dAfGGFkaH2OvaTs4tt1lsK-upJqM/exec?order=" 
+        + encodeURIComponent(orderText))
+    .then(() => {
+      alert("Pedido enviado! Vou ver e te respondo 💛");
+      cart = [];
+      updateCartCount();
+      renderCart();
+      closeCartDrawer();
+    })
+    .catch(err => {
+      console.error("Erro ao atualizar planilha:", err);
+      alert("Seu pedido foi enviado, mas houve um erro ao atualizar a disponibilidade. Vou corrigir manualmente 💛");
+    });
+}
+
 });
 
 loadProducts();
