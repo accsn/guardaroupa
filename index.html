@@ -3,70 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guarda-Roupa da Anna</title>
+  <title>Brechó da Anna - Só que de Graça</title>
+
+  <!-- CSS principal -->
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cooper+Black&family=Kumbh+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Fontes -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cooper+Black&family=Kumbh+Sans:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
 
-<header>
-  <img src="images/logo.png" alt="Se Quiser, É Teu" class="site-logo">
-</header>
+  <!-- TOPO / LOGO -->
+  <header>
+    <img src="images/logo.png" alt="Brechó da Anna - Só que de Graça" class="site-logo" />
+  </header>
 
+  <!-- BOTÃO SACOLA + VOLTAR AO TOPO -->
   <button id="cart-button">
     🛒 <span id="cart-count">0</span>
   </button>
+
   <button id="back-to-top">↑</button>
 
-<!-- FILTERS -->
-<section id="filters">
-  <div id="type-filters">
-    <!-- Buttons generated automatically -->
-  </div>
+  <!-- FILTROS -->
+  <section id="filters">
+    <div id="type-filters">
+      <!-- Botões de tipo gerados via JS -->
+    </div>
 
-  <div id="size-filter-container">
-    <label for="size-filter">Tamanho:</label>
-    <select id="size-filter">
-      <option value="">Todos</option>
-      <option value="U">U (único)</option>
-      <option value="M">M</option>
-      <option value="G">G</option>
-      <option value="GG">GG</option>
-    </select>
-  </div>
-</section>
+    <div id="size-filter-container">
+      <label for="size-filter">Tamanho:</label>
+      <select id="size-filter">
+        <option value="">Todos</option>
+        <option value="U">U (único)</option>
+        <option value="M">M</option>
+        <option value="G">G</option>
+        <option value="GG">GG</option>
+      </select>
+    </div>
+  </section>
 
-<main id="products-grid" class="product-grid"></main>
+  <!-- GRID DE PRODUTOS -->
+  <main id="products-grid" class="product-grid"></main>
 
-<!-- SACOLA -->
-<div id="cart-drawer" class="hidden">
-  <h2>Sua Sacola</h2>
-  <ul id="cart-items"></ul>
+  <!-- SACOLA LATERAL -->
+  <div id="cart-drawer" class="hidden">
+    <h2>Sua Sacola</h2>
 
-<form id="checkout-form"
+    <ul id="cart-items"></ul>
+
+    <!-- FORMULÁRIO ENVIADO PARA O GOOGLE FORMS -->
+    <form
+      id="checkout-form"
       action="https://docs.google.com/forms/d/e/1FAIpQLSeHwpIWAkPO-2TjDDbzojZBc5nyR-5li61cORphSjUCka6_fQ/formResponse"
       method="POST"
-      target="hidden_iframe">
+      target="hidden_iframe"
+    >
+      <input
+        type="text"
+        name="entry.339859136"
+        placeholder="Seu nome:"
+        required
+      />
 
-  <input type="text" name="entry.339859136" placeholder="Seu nome:" required>
-  <input type="text" name="entry.1578529997" placeholder="Nº de Celular:" required>
-  <textarea name="entry.1534696098" placeholder="Alguma observação?"></textarea>
+      <input
+        type="text"
+        name="entry.1578529997"
+        placeholder="Nº de Celular:"
+        required
+      />
 
-  <!-- hidden field for the cart -->
-  <textarea name="entry.2060883215" id="order-field" style="display:none;"></textarea>
+      <textarea
+        name="entry.1534696098"
+        placeholder="Alguma observação?"
+      ></textarea>
 
-  <button type="submit">Enviar Pedido</button>
-</form>
+      <!-- campo escondido onde o JS coloca a lista de itens -->
+      <textarea
+        name="entry.2060883215"
+        id="order-field"
+        style="display:none;"
+      ></textarea>
 
-<!-- invisible iframe to stop redirect -->
-<iframe name="hidden_iframe" style="display:none;"></iframe>
+      <button type="submit">Enviar Pedido</button>
+    </form>
 
-<!-- LIGHTBOX -->
-<div id="lightbox" class="hidden">
-  <img id="lightbox-img" src="" alt="" />
-</div>
+    <!-- iframe invisível para não sair da página ao enviar o form -->
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
 
-<script src="app.js"></script>
+    <!-- botão para fechar a sacola (usado no JS) -->
+    <button id="close-cart" class="close-btn">Fechar</button>
+  </div>
+
+  <!-- LIGHTBOX DE IMAGEM -->
+  <div id="lightbox" class="hidden">
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <!-- JS PRINCIPAL -->
+  <script src="app.js"></script>
 </body>
 </html>
-
