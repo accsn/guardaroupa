@@ -156,13 +156,30 @@ function renderCart() {
 
   cart.forEach((item, index) => {
     const li = document.createElement("li");
-    li.textContent = `${index + 1}. ${item.name} (${item.size || "U"})`;
+    li.classList.add("cart-item");
+    li.innerHTML = `
+      <span>${index + 1}. ${item.name} (${item.size || "U"})</span>
+      <button class="remove-item" data-index="${index}" aria-label="Remover item">×</button>
+    `;
     list.appendChild(li);
+  });
+
+  // botão de remover: liga depois de montar a lista
+  list.querySelectorAll(".remove-item").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const idx = Number(btn.dataset.index);
+      cart.splice(idx, 1);
+      updateCartCount();
+      renderCart(); // re-render cart and hidden field
+    });
   });
 
   // texto que vai pro Netlify
   orderField.value = cart
-    .map((item, index) => `${index + 1}. ${item.name} - tamanho ${item.size || "U"}`)
+    .map(
+      (item, index) =>
+        `${index + 1}. ${item.name} - tamanho ${item.size || "U"}`
+    )
     .join("\n");
 }
 
