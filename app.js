@@ -123,3 +123,5 @@ function setupCarousel(card, images) {
     img.src = images[index];
   });
 }
+
+loadProducts();
