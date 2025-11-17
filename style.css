@@ -85,8 +85,8 @@ header h1 {
 
 #back-to-top {
   position: fixed;
-  top: 1rem;
-  right: 4.5rem;      /* sits nicely to the left of the cart button */
+  bottom: 1.5rem;
+  right: 1.5rem;      /* sits nicely to the left of the cart button */
 
   width: 38px;
   height: 38px;
