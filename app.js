@@ -52,7 +52,7 @@ function csvToJson(csv) {
     // Clean fields
     obj.photos = obj.photos ? obj.photos.split(",").map(s => s.trim()) : [];
     obj.tags = obj.tags ? obj.tags.split(",").map(s => s.trim()) : [];
-    obj.available = obj.available.toUpperCase() === "TRUE";
+    obj.available = obj.available.trim().toUpperCase() === "TRUE";
 
     items.push(obj);
   }
