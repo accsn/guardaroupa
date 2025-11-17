@@ -28,10 +28,10 @@ header {
 header::after {
   content: "";
   position: absolute;
-  bottom: -16px;  /* moved up */
+  bottom: -8px;  /* moved up */
   left: 0;
   width: 100%;
-  height: 16px;   /* smaller wave */
+  height: 8px;   /* smaller wave */
   background: var(--brown);
   clip-path: polygon(
     0 40%, 10% 60%, 20% 40%, 30% 60%,
