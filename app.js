@@ -4,6 +4,7 @@
 let allProducts = [];
 let filteredProducts = [];
 let cart = [];
+let lastFetchTime = 0;
 
 const typeList = [
   "acessórios",
@@ -20,6 +21,7 @@ const typeList = [
 // ---------- CONSTANTS / DOM ----------
 const SHEET_URL =
   "https://script.google.com/macros/s/AKfycbySmByFBnRaaXNTYxIER6Ek69YXdCj7m95eAA2ZJF7kDxJYP2A6vKVo5uRPleLoVSg/exec";
+const REFRESH_INTERVAL = 10000; // Refresh every 10 seconds
 
 const productsGrid = document.getElementById("products-grid");
 const typeFiltersContainer = document.getElementById("type-filters");
@@ -36,9 +38,11 @@ const checkoutForm = document.getElementById("checkout-form");
 const orderField = document.getElementById("order-field");
 
 // ---------- LOAD PRODUCTS FROM APPS SCRIPT ----------
-async function loadProducts() {
+async function loadProducts(silent = false) {
   try {
-    productsGrid.innerHTML = "<p style='text-align:center;padding:2rem;'>Carregando...</p>";
+    if (!silent) {
+      productsGrid.innerHTML = "<p style='text-align:center;padding:2rem;'>Carregando...</p>";
+    }
 
     const res = await fetch(SHEET_URL + "?t=" + Date.now());
     const text = await res.text();
@@ -48,21 +52,37 @@ async function loadProducts() {
       data = JSON.parse(text);
     } catch (parseErr) {
       console.error("Erro ao interpretar JSON:", parseErr, text);
-      productsGrid.innerHTML =
-        "<p style='text-align:center;padding:2rem;'>Erro ao ler produtos.</p>";
+      if (!silent) {
+        productsGrid.innerHTML =
+          "<p style='text-align:center;padding:2rem;'>Erro ao ler produtos.</p>";
+      }
       return;
     }
 
     allProducts = Array.isArray(data) ? data : [];
     filteredProducts = allProducts.slice();
+    lastFetchTime = Date.now();
 
-    renderFilters();
+    if (!silent) {
+      renderFilters();
+    }
     renderProducts();
+
+    console.log("Products loaded:", allProducts.length, "available:", allProducts.filter(p => p.available).length);
   } catch (error) {
     console.error("Erro ao carregar via Apps Script:", error);
-    productsGrid.innerHTML =
-      "<p style='text-align:center;padding:2rem;'>Erro ao carregar produtos. Verifique sua conexão.</p>";
+    if (!silent) {
+      productsGrid.innerHTML =
+        "<p style='text-align:center;padding:2rem;'>Erro ao carregar produtos. Verifique sua conexão.</p>";
+    }
   }
+}
+
+// ---------- AUTO-REFRESH ----------
+function startAutoRefresh() {
+  setInterval(() => {
+    loadProducts(true); // silent refresh
+  }, REFRESH_INTERVAL);
 }
 
 // ---------- FILTER BUTTONS ----------
@@ -362,6 +382,12 @@ if (checkoutForm) {
   checkoutForm.addEventListener("submit", (e) => {
     // O form é enviado automaticamente para o Google Forms via action/target
     alert("Pedido enviado! Vou ver e te respondo 💛");
+    
+    // Refresh products after a short delay to show updated availability
+    setTimeout(() => {
+      loadProducts(true);
+    }, 2000);
+    
     cart = [];
     updateCartCount();
     renderCart();
@@ -371,3 +397,4 @@ if (checkoutForm) {
 
 // ---------- INIT ----------
 loadProducts();
+startAutoRefresh();
