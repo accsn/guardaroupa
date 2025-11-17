@@ -63,6 +63,16 @@ header h1 {
   text-shadow: 3px 3px 0 var(--deep-brown);
 }
 
+.site-logo {
+  width: 260px;        /* adjust the size as you prefer */
+  max-width: 70%;      /* prevents it from getting too big on small screens */
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;          /* sits above the wavy header effect */
+  filter: drop-shadow(3px 3px 0 var(--deep-brown));
+}
+
 #cart-button {
   position: absolute;
   top: 1.2rem;
