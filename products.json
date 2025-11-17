@@ -14,6 +14,20 @@
     "acessórios",
     "U"
   ]
+},
+
+{
+  "name": "Blusa listrada colorida decote quadrado",
+  "photos": [
+    "cropped-GG-shein-striped-01.jpg"
+  ],
+  "description": "Blusa listrada super colorida, com decote quadrado e tecido canelado bem confortável. Tem aquela vibe retrô charmosa que combina com jeans, shorts ou saia. Leve, estica bem e fica uma graça no corpo.",
+  "size": "GG",
+  "available": true,
+  "tags": [
+    "blusa",
+    "GG"
+  ]
 }
 
 ]
