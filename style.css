@@ -213,11 +213,16 @@ form button {
 }
 
 .photo-stack img {
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-  object-fit: cover;
+  width: auto;               /* don't stretch horizontally */
+  max-width: 100%;           /* never exceed card width */
+  height: 250px;             /* fixed preview height */
+  object-fit: contain;       /* show the whole photo */
   border-radius: 10px;
   cursor: zoom-in;
+  display: block;
+  margin: 0 auto;            /* center image */
+  background: #fff;          /* optional clean background */
+  padding: 8px;              /* optional spacing */
 }
+
 
