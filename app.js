@@ -63,7 +63,7 @@ function csvToJson(csv) {
 // Load from Google Sheets!
 async function loadProducts() {
   try {
-    const res = await fetch(SHEET_URL);
+    const res = await fetch(SHEET_URL + "?nocache=" + Date.now());
     const csv = await res.text();
     const data = csvToJson(csv);
 
