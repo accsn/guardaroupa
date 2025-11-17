@@ -15,20 +15,71 @@ const typeList = [
 ];
 
 // LOAD PRODUCTS
+const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRUeQaOHqIS7jqchRbFdM9s7Y65jGWrvKDXvSGSxDqNx7ysuG58hzjHGTN_nsWyrxg-roS5vFESVyqD/pub?output=csv";
+
+// Convert CSV to JSON
+function csvToJson(csv) {
+  const lines = csv.split("\n").filter(l => l.trim().length > 0);
+  const headers = lines[0].split(",").map(h => h.trim());
+
+  const items = [];
+
+  for (let i = 1; i < lines.length; i++) {
+    const row = [];
+    let current = "";
+    let insideQuotes = false;
+
+    // CSV parser that respects commas inside quotes
+    for (const char of lines[i]) {
+      if (char === '"') {
+        insideQuotes = !insideQuotes;
+        continue;
+      }
+      if (char === "," && !insideQuotes) {
+        row.push(current);
+        current = "";
+      } else {
+        current += char;
+      }
+    }
+    row.push(current);
+
+    const obj = {};
+    headers.forEach((h, idx) => {
+      obj[h] = row[idx] ? row[idx].trim() : "";
+    });
+
+    // Clean fields
+    obj.photos = obj.photos ? obj.photos.split(",").map(s => s.trim()) : [];
+    obj.tags = obj.tags ? obj.tags.split(",").map(s => s.trim()) : [];
+    obj.available = obj.available.toUpperCase() === "TRUE";
+
+    items.push(obj);
+  }
+
+  return items;
+}
+
+// Load from Google Sheets!
 async function loadProducts() {
   try {
-    const res = await fetch("products.json");
-    const data = await res.json();
+    const res = await fetch(SHEET_URL);
+    const csv = await res.text();
+    const data = csvToJson(csv);
+
     allProducts = data;
     filteredProducts = data;
+
     renderFilters();
     renderProducts();
+
   } catch (error) {
-    console.error("Erro ao carregar produtos:", error);
+    console.error("Erro ao carregar da planilha:", error);
     document.getElementById("products-grid").innerHTML =
-      "<p>Erro ao carregar produtos. Verifique se o arquivo products.json está no mesmo diretório.</p>";
+      "<p>Erro ao carregar produtos. Verifique sua conexão.</p>";
   }
 }
+
 
 // RENDER FILTER BUTTONS
 function renderFilters() {
@@ -111,6 +162,7 @@ function createProductCard(product) {
     <div class="info">
       <h3>${product.name}</h3>
       <p class="size">${product.size || "tamanho único"}</p>
+      ${product.available ? "" : "<span class='unavailable-tag'>Indisponível</span>"}
       ${
         product.description
           ? `<p class="description">${product.description}</p>`
@@ -122,6 +174,10 @@ function createProductCard(product) {
 
   if (hasMultipleImages) {
     setupCarousel(card, images);
+  }
+
+  if (!product.available) {
+  card.classList.add("unavailable");
   }
 
   // botão "Adicionar à sacola"
@@ -136,6 +192,10 @@ function createProductCard(product) {
   mainImg.addEventListener("click", () => {
     openLightbox(mainImg.src, product.name);
   });
+
+  if (!product.available) {
+  card.style.pointerEvents = "none";
+  }
 
   return card;
 }
