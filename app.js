@@ -48,7 +48,7 @@ function renderFilters() {
 
   const showAll = document.createElement("button");
   showAll.textContent = "todos";
-  showAll.classList.add("filter-btn", "active");
+  showAll.classList.add("filter-btn");
   showAll.addEventListener("click", () => {
     document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
     showAll.classList.add("active");
@@ -57,7 +57,7 @@ function renderFilters() {
   });
 
   container.appendChild(showAll);
-}
+  showAll.classList.add("active");}
 
 
 // RENDER PRODUCT GRID
