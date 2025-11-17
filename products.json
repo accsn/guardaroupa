@@ -1,508 +1,342 @@
 [
-
   {
-  "name": "Bolsa Transversal - Imaginarium - Preta",
-  "photos": [
-    "bag-imaginarium-crossbody-01.jpg",
-    "bag-imaginarium-crossbody-02.jpg",
-    "bag-imaginarium-crossbody-03.jpg"
-  ],
-  "description": "Bolsa tiracolo preta, compacta e prática, com vários bolsos e detalhes discretos em roxo. Perfeita para o dia a dia e super leve de usar.\n\n– Material resistente\n– Alça ajustável\n– Compartimento frontal com zíper\n– Tamanho único",
-  "size": "U",
-  "available": true,
-  "tags": [
-    "acessórios",
-    "U"
-  ]
-},
-
-{
-  "name": "Blusa listrada colorida decote quadrado",
-  "photos": [
-    "cropped-GG-shein-striped-01.jpg"
-  ],
-  "description": "Blusa listrada super colorida, com decote quadrado e tecido canelado bem confortável. Tem aquela vibe retrô charmosa que combina com jeans, shorts ou saia. Leve, estica bem e fica uma graça no corpo.",
-  "size": "GG",
-  "available": true,
-  "tags": [
-    "blusa",
-    "GG"
-  ]
-},
-
-{
-  "name": "Vestido vermelho de poá (rodadinho)",
-  "photos": [
-    "dress-G-polkadot-red-01.jpg",
-    "dress-G-polkadot-red-02.jpg"
-  ],
-  "description": "Vestido vermelho de poá, leve e rodadinho, com decote arredondado e alças largas super confortáveis. Tem um caimento fofíssimo e aquela cara de look fácil que resolve o dia inteiro.",
-  "size": "G",
-  "available": true,
-  "tags": [
-    "vestido",
-    "G"
-  ]
-},
-
-{
-  "name": "Moletom cinza Under Armour com capuz",
-  "photos": [
-    "hoodie-GG-underarmour-greypurple-01.jpg",
-    "hoodie-GG-underarmour-greypurple-02.jpg"
-  ],
-  "description": "Moletom cinza da Under Armour, super quentinho e confortável, com bolsão canguru e capuz ajustável. Tem logo grande na frente em roxo escuro, dando um toque esportivo bonito e discreto.",
-  "size": "GG",
-  "available": true,
-  "tags": [
-    "moletom",
-    "GG"
-  ]
-},
-
-{
-  "name": "Moletom bordô Under Armour com capuz",
-  "photos": [
-    "hoodie-GG-underarmour-redppink-01.jpg",
-    "hoodie-GG-underarmour-redppink-02.jpg",
-    "hoodie-GG-underarmour-redppink-03.jpg",
-    "hoodie-GG-underarmour-redppink-04.jpg"
-  ],
-  "description": "Moletom bordô da Under Armour, macio e bem quentinho, com logo grande em tom claro na frente. Modelagem confortável, capuz ajustável e bolsão canguru. Alguns defeitos cosméticos.",
-  "size": "GG",
-  "available": true,
-  "tags": [
-    "moletom",
-    "GG"
-  ]
-},
-
-{
-  "name": "Jaqueta preta Forever 21 com capuz",
-  "photos": [
-    "jacket-G-forever21-black-01.jpg",
-    "jacket-G-forever21-black-02.jpg",
-    "jacket-G-forever21-black-03.jpg"
-  ],
-  "description": "Jaqueta preta da Forever 21, levinha e super versátil, com capuz e fechamento por zíper. Possui barras e punhos com elástico para um caimento mais ajustado e bolsos laterais com zíper.",
-  "size": "G",
-  "available": true,
-  "tags": [
-    "casaco",
-    "G"
-  ]
-},
-
-{
-  "name": "Suéter rosê Chenault",
-  "photos": [
-    "jumper-G-chenault-pink-01.jpg",
-    "jumper-G-chenault-pink-02.jpg"
-  ],
-  "description": "Suéter rosê da Chenault, super macia e confortável, com textura canelada e modelagem soltinha. O tecido é leve, quentinho e muito agradável no corpo.",
-  "size": "G",
-  "available": true,
-  "tags": [
-    "blusa",
-    "G"
-  ]
-},
-
-{
-  "name": "Blusa preta fleece Old Navy",
-  "photos": [
-    "jumper-G-oldnavy-preto-01.jpg",
-    "jumper-G-oldnavy-preto-02.jpg"
-  ],
-  "description": "Blusa preta em fleece da Old Navy, super quentinha e macia. O tecido é leve, mas retém bem o calor, e a modelagem soltinha deixa tudo mais aconchegante.",
-  "size": "G",
-  "available": true,
-  "tags": [
-    "blusa",
-    "G"
-  ]
-},
-
-{
-  "name": "Legging roxa Under Armour com bolso",
-  "photos": [
-    "leggings-GG-underarmour-darkpurple-01.jpg"
-  ],
-  "description": "Legging roxa da Under Armour, super confortável e com tecido encorpado. O modelo tem cintura bem alta que abraça a barriga com firmeza, além de bolsos laterais super práticos para levar celular ou chaves. É macia e resistente.",
-  "size": "GG",
-  "available": true,
-  "tags": [
-    "calça",
-    "GG"
-  ]
-},
-
-{
-  "name": "Legging estampada astrológica (luas e sóis)",
-  "photos": [
-    "leggings-G-shein-stars-moon-01.jpg"
-  ],
-  "description": "Legging leve e super confortável com estampa astrológica de luas, sóis e estrelas em tons suaves. O tecido é macio e fresquinho. Tem cós elástico que se ajusta bem ao corpo.",
-  "size": "G",
-  "available": true,
-  "tags": [
-    "calça",
-    "G"
-  ]
-},
-
-{
-  "name": "Shorts jeans dobradinho (tamanho 40)",
-  "photos": [
-    "shorts-40-jeans-01.jpg",
-    "shorts-40-jeans-02.jpg"
-  ],
-  "description": "Shorts jeans azul escuro com barra dobrada. O tecido é encorpado, confortável e resistente, com leve desgastado na cor que dá um visual moderno. Possui bolsos frontais e traseiros funcionais e fechamento por botão e zíper.",
-  "size": "M",
-  "available": true,
-  "tags": [
-    "shorts",
-    "M"
-  ]
-},
-
-{
-  "name": "Shorts esportivo Under Armour azul-marinho",
-  "photos": [
-    "shorts-GG-underarmour-navy-01.jpg"
-  ],
-  "description": "Shorts esportivo Under Armour em azul-marinho, com elástico largo estampado na cintura e detalhe branco nas bordas. É leve, respirável e feito para máximo conforto.\n\nO caimento é solto, o tecido é suave e seca rápido.",
-  "size": "GG",
-  "available": true,
-  "tags": [
-    "shorts",
-    "GG"
-  ]
-},
-
-{
-  "name": "Short preto texturizado com camada dupla",
-  "photos": [
-    "shorts-G-shein-duplo-black-01.jpg",
-    "shorts-G-shein-duplo-black-02.jpg"
-  ],
-  "description": "Short preto super delicado, com tecido leve e camada dupla que dá movimento e evita transparência. O caimento é soltinho, confortável e bem feminino.",
-  "size": "G",
-  "available": true,
-  "tags": [
-    "shorts",
-    "G"
-  ]
-},
-
-{
-  "name": "Short preto soltinho com textura plissada",
-  "photos": [
-    "shorts-G-shein-franzido-black-03.jpg",
-    "shorts-G-shein-franzido-black-01.jpg",
-    "shorts-G-shein-franzido-black-02.jpg"
-  ],
-  "description": "Short preto confortável e estiloso, feito em tecido leve com textura plissada que dá movimento e um caimento fluido super bonito. Possui cintura elástica com amarração frontal, garantindo ajuste perfeito.",
-  "size": "G",
-  "available": true,
-  "tags": [
-    "shorts",
-    "G"
-  ]
-},
-
-{
-  "name": "Short Under Armour Azul Marinho com forro",
-  "photos": [
-    "shorts-G-underarmour-navy-01.jpg",
-    "shorts-G-underarmour-navy-02.jpg"
-  ],
-  "description": "Short esportivo azul marinho da Under Armour, modelo com forro interno. Cós com ajuste por cordão, detalhe branco nas laterais e logo icônico da marca.\nLevinho, confortável e seca super rápido.",
-  "size": "G",
-  "available": true,
-  "tags": [
-    "shorts",
-    "G"
-  ]
-},
-
-{
-  "name": "Saia Toalha Off-White",
-  "photos": [
-    "skirt-G-oldnavy-towel-01.jpg"
-  ],
-  "description": "Saia estilo toalha em tom off-white, super macia e confortável. Possui cós elástico largo, caimento soltinho e tecido tipo felpa, perfeito para usar após o banho, na praia/piscina, ou simplesmente para ficar confortável em casa.",
-  "size": "G",
-  "available": true,
-  "tags": [
-    "saia",
-    "G"
-  ]
-},
-
-{
-  "name": "Saia Midi Preta Texturizada",
-  "photos": [
-    "skirt-M-oldnavy-black.jpg"
-  ],
-  "description": "Saia preta com tecido texturizado e caimento soltinho, super confortável e versátil. Possui cós elástico e comprimento midi.",
-  "size": "M",
-  "available": true,
-  "tags": [
-    "saia",
-    "M"
-  ]
-},
-
-{
-  "name": "Regata Bege Básica",
-  "photos": [
-    "tanktop-G-beige-01.jpg"
-  ],
-  "description": "Regata bege de alcinhas finas, tecido macio e levinho, perfeita para o dia a dia. Caimento mais justo e confortável, ótima para usar sozinha nos dias quentes ou como segunda camada por baixo de camisas e casacos.",
-  "size": "G",
-  "available": true,
-  "tags": [
-    "blusa",
-    "G"
-  ]
-},
-
-{
-  "name": "Regata Esportiva Azul Marinho",
-  "photos": [
-    "tanktop-GG-navy-01.jpg"
-  ],
-  "description": "Regata esportiva azul marinho, modelo nadador, feita em tecido leve e respirável.",
-  "size": "GG",
-  "available": true,
-  "tags": [
-    "blusa",
-    "GG"
-  ]
-},
-
-{
-  "name": "Regata Preta Básica",
-  "photos": [
-    "tanktop-G-marisa-black-01.jpg",
-    "tanktop-G-marisa-black-02.jpg"
-  ],
-  "description": "Regata preta básica com decote V, em tecido leve e macio. Tem caimento soltinho e super confortável.",
-  "size": "G",
-  "available": true,
-  "tags": [
-    "blusa",
-    "G"
-  ]
-},
-
-{
-  "name": "Camiseta Preta – GG (Chico Rei – Clube da Esquina)",
-  "photos": [
-    "tshirt-GG-chicorei-clubeesquina-01.jpg",
-    "tshirt-GG-chicorei-clubeesquina-02.jpg"
-  ],
-  "description": "Camiseta preta da Chico Rei, edição especial Clube da Esquina. A malha é macia, veste soltinha e confortável.",
-  "size": "GG",
-  "available": true,
-  "tags": [
-    "camiseta",
-    "GG"
-  ]
-},
-
-{
-  "name": "Camiseta Preta – GG (Chico Rei – Hocus Pocus / Gato Preto)",
-  "photos": [
-    "tshirt-GG-chicorei-hocuspocus-01.jpg",
-    "tshirt-GG-chicorei-hocuspocus-02.jpg"
-  ],
-  "description": "Camiseta preta da Chico Rei com estampa temática Hocus Pocus. Malha macia, confortável e com caimento soltinho.",
-  "size": "GG",
-  "available": true,
-  "tags": [
-    "camiseta",
-    "GG"
-  ]
-},
-
-{
-  "name": "Camiseta Preta – GG molde feminino (Chico Rei – Je ne Regrette Rien)",
-  "photos": [
-    "tshirt-GG-chicorei-jeneregrette-01.jpg",
-    "tshirt-GG-chicorei-jeneregrette-02.jpg"
-  ],
-  "description": "Camiseta preta da Chico Rei com frase em francês estampada na frente: “Je ne regrette rien”. A malha é macia e confortável, vestindo soltinho.",
-  "size": "GG",
-  "available": true,
-  "tags": [
-    "camiseta",
-    "GG"
-  ]
-},
-
-{
-  "name": "Camiseta Preta – GG molde feminino (Nerd Universe – Evil Cat)",
-  "photos": [
-    "tshirt-GG-nerduniverse-evilcat-01.jpg",
-    "tshirt-GG-nerduniverse-evilcat-02.jpg"
-  ],
-  "description": "Camiseta preta da Nerd Universe com estampa de gatinho demoníaco fofo-malvado sentado num pentagrama estilizado.",
-  "size": "GG",
-  "available": true,
-  "tags": [
-    "camiseta",
-    "GG"
-  ]
-},
-
-{
-  "name": "Camiseta Off-White – GG (Nerd Universe – Herbology)",
-  "photos": [
-    "tshirt-GG-nerduniverse-herbology-01.jpg"
-  ],
-  "description": "Camiseta em tom off-white da Nerd Universe, com estampa temática de Herbology num estilo quase de manual ilustrado.",
-  "size": "GG",
-  "available": true,
-  "tags": [
-    "camiseta",
-    "GG"
-  ]
-},
-
-{
-  "name": "Camiseta Preta – GG (Nerd Universe – Howl’s Moving Castle)",
-  "photos": [
-    "tshirt-GG-nerduniverse-howlscastle-01.jpg",
-    "tshirt-GG-nerduniverse-howlscastle-02.jpg"
-  ],
-  "description": "Camiseta preta da Nerd Universe, estampa inspirada em O Castelo Animado.",
-  "size": "GG",
-  "available": true,
-  "tags": [
-    "camiseta",
-    "GG"
-  ]
-},
-
-{
-  "name": "Camiseta Preta – GG (Nerd Universe – “How to Destroy Humans”)",
-  "photos": [
-    "tshirt-GG-nerduniverse-howtocat-01.jpg",
-    "tshirt-GG-nerduniverse-howtocat-02.jpg",
-    "tshirt-GG-nerduniverse-howtocat-03.jpg",
-    "tshirt-GG-nerduniverse-howtocat-04.jpg"
-  ],
-  "description": "Camiseta preta da Nerd Universe, com aquela vibe divertida e levemente maléfica que só um gatinho fofo tramando a queda da humanidade consegue transmitir.",
-  "size": "GG",
-  "available": true,
-  "tags": [
-    "camiseta",
-    "GG"
-  ]
-},
-
-{
-  "name": "Camiseta Preta – GG (Nerd Universe – Nekomancer)",
-  "photos": [
-    "tshirt-GG-nerduniverse-nekomancer-01.jpg"
-  ],
-  "description": "Camiseta preta da Nerd Universe com estampa colorida de “Nekomancer”, mostrando um gatinho mago conjurando gatos fantasma. Vibe divertida, nerd e estilosa, perfeita para quem ama humor místico com felinos.",
-  "size": "GG",
-  "available": true,
-  "tags": [
-    "camiseta",
-    "GG"
-  ]
-},
-
-{
-  "name": "Camiseta preta “BRITNEY” (M Unissex)",
-  "photos": [
-    "tshirt-GG-official-britney-01.jpg",
-    "tshirt-GG-official-britney-02.jpg",
-    "tshirt-GG-official-britney-03.jpg"
-  ],
-  "description": "Camiseta oficial com estampa da Britney sentada, bem icônica. A malha está em bom estado, porém as letras da estampa têm desgaste visível (um pouco levantadas/rachadinhas). Ainda assim, super estilosa para looks casuais.",
-  "size": "M",
-  "available": true,
-  "tags": [
-    "camiseta",
-    "M"
-  ]
-},
-
-{
-  "name": "Camiseta verde “Skull the Frog” – GG (oversized)",
-  "photos": [
-    "tshirt-GG-shein-frog-01.jpg",
-    "tshirt-GG-shein-frog-02.jpg"
-  ],
-  "description": "Modelo bem amplo, confortável e estiloso. Estampa delicada de sapo com flores e cogumelos, num verde oliva fácil de combinar. Perfeita para looks casuais e soltinhos.",
-  "size": "GG",
-  "available": true,
-  "tags": [
-    "camiseta",
-    "GG"
-  ]
-},
-
-{
-  "name": "Camiseta Harry Potter – G",
-  "photos": [
-    "tshirt-G-official-hpglasses-01.jpg"
-  ],
-  "description": "Vermelha com estampa dourada dos óculos e cicatriz do Harry. Produto oficial, leve e confortável. Perfeita para fãs.",
-  "size": "G",
-  "available": true,
-  "tags": [
-    "camiseta",
-    "G"
-  ]
-},
-
-{
-  "name": "Camiseta Shein Fantasminhas – G",
-  "photos": [
-    "tshirt-G-shein-beigeghosts-01.jpg"
-  ],
-  "description": "Bege clara com estampa fofa de vários fantasminhas. Tecido leve e macio, bem confortável.",
-  "size": "G",
-  "available": true,
-  "tags": [
-    "camiseta",
-    "G"
-  ]
-},
-
-{
-  "name": "Camiseta Chico Rei - Horror Cats – Unissex M",
-  "photos": [
-    "tshirt-M-chicorei-horrorcats-01.jpg"
-  ],
-  "description": "Preta com estampas dos “gatíneos” dos filmes de terror. Malha macia e veste soltinha.",
-  "size": "M",
-  "available": true,
-  "tags": [
-    "camiseta",
-    "M"
-  ]
-},
-
-{
-  "name": "Camiseta M. Officer - Game Boy – M",
-  "photos": [
-    "tshirt-M-mofficer-gameboy-01.jpg"
-  ],
-  "description": "Preta com estampa minimalista de Game Boy em branco. Modelagem soltinha e confortável.",
-  "size": "M",
-  "available": true,
-  "tags": [
-    "camiseta",
-    "M"
-  ]
-}
-
-
+    "name": "Bolsa Transversal - Imaginarium - Preta",
+    "photos": [
+      "images/bag-imaginarium-crossbody-01.jpg",
+      "images/bag-imaginarium-crossbody-02.jpg",
+      "images/bag-imaginarium-crossbody-03.jpg"
+    ],
+    "description": "Bolsa tiracolo preta, compacta e prática, com vários bolsos e detalhes discretos em roxo. Perfeita para o dia a dia e super leve de usar.\n\n– Material resistente\n– Alça ajustável\n– Compartimento frontal com zíper\n– Tamanho único",
+    "size": "U",
+    "available": true,
+    "tags": ["acessórios", "U"]
+  },
+  {
+    "name": "Blusa listrada colorida decote quadrado",
+    "photos": ["images/cropped-GG-shein-striped-01.jpg"],
+    "description": "Blusa listrada super colorida, com decote quadrado e tecido canelado bem confortável. Tem aquela vibe retrô charmosa que combina com jeans, shorts ou saia. Leve, estica bem e fica uma graça no corpo.",
+    "size": "GG",
+    "available": true,
+    "tags": ["blusa", "GG"]
+  },
+  {
+    "name": "Vestido vermelho de poá (rodadinho)",
+    "photos": [
+      "images/dress-G-polkadot-red-01.jpg",
+      "images/dress-G-polkadot-red-02.jpg"
+    ],
+    "description": "Vestido vermelho de poá, leve e rodadinho, com decote arredondado e alças largas super confortáveis. Tem um caimento fofíssimo e aquela cara de look fácil que resolve o dia inteiro.",
+    "size": "G",
+    "available": true,
+    "tags": ["vestido", "G"]
+  },
+  {
+    "name": "Moletom cinza Under Armour com capuz",
+    "photos": [
+      "images/hoodie-GG-underarmour-greypurple-01.jpg",
+      "images/hoodie-GG-underarmour-greypurple-02.jpg"
+    ],
+    "description": "Moletom cinza da Under Armour, super quentinho e confortável, com bolsão canguru e capuz ajustável. Tem logo grande na frente em roxo escuro, dando um toque esportivo bonito e discreto.",
+    "size": "GG",
+    "available": true,
+    "tags": ["moletom", "GG"]
+  },
+  {
+    "name": "Moletom bordô Under Armour com capuz",
+    "photos": [
+      "images/hoodie-GG-underarmour-redppink-01.jpg",
+      "images/hoodie-GG-underarmour-redppink-02.jpg",
+      "images/hoodie-GG-underarmour-redppink-03.jpg",
+      "images/hoodie-GG-underarmour-redppink-04.jpg"
+    ],
+    "description": "Moletom bordô da Under Armour, macio e bem quentinho, com logo grande em tom claro na frente. Modelagem confortável, capuz ajustável e bolsão canguru. Alguns defeitos cosméticos.",
+    "size": "GG",
+    "available": true,
+    "tags": ["moletom", "GG"]
+  },
+  {
+    "name": "Jaqueta preta Forever 21 com capuz",
+    "photos": [
+      "images/jacket-G-forever21-black-01.jpg",
+      "images/jacket-G-forever21-black-02.jpg",
+      "images/jacket-G-forever21-black-03.jpg"
+    ],
+    "description": "Jaqueta preta da Forever 21, levinha e super versátil, com capuz e fechamento por zíper. Possui barras e punhos com elástico para um caimento mais ajustado e bolsos laterais com zíper.",
+    "size": "G",
+    "available": true,
+    "tags": ["casaco", "G"]
+  },
+  {
+    "name": "Suéter rosê Chenault",
+    "photos": [
+      "images/jumper-G-chenault-pink-01.jpg",
+      "images/jumper-G-chenault-pink-02.jpg"
+    ],
+    "description": "Suéter rosê da Chenault, super macia e confortável, com textura canelada e modelagem soltinha. O tecido é leve, quentinho e muito agradável no corpo.",
+    "size": "G",
+    "available": true,
+    "tags": ["blusa", "G"]
+  },
+  {
+    "name": "Blusa preta fleece Old Navy",
+    "photos": [
+      "images/jumper-G-oldnavy-preto-01.jpg",
+      "images/jumper-G-oldnavy-preto-02.jpg"
+    ],
+    "description": "Blusa preta em fleece da Old Navy, super quentinha e macia. O tecido é leve, mas retém bem o calor, e a modelagem soltinha deixa tudo mais aconchegante.",
+    "size": "G",
+    "available": true,
+    "tags": ["blusa", "G"]
+  },
+  {
+    "name": "Legging roxa Under Armour com bolso",
+    "photos": ["images/leggings-GG-underarmour-darkpurple-01.jpg"],
+    "description": "Legging roxa da Under Armour, super confortável e com tecido encorpado. O modelo tem cintura bem alta que abraça a barriga com firmeza, além de bolsos laterais super práticos para levar celular ou chaves. É macia e resistente.",
+    "size": "GG",
+    "available": true,
+    "tags": ["calça", "GG"]
+  },
+  {
+    "name": "Legging estampada astrológica (luas e sóis)",
+    "photos": ["images/leggings-G-shein-stars-moon-01.jpg"],
+    "description": "Legging leve e super confortável com estampa astrológica de luas, sóis e estrelas em tons suaves. O tecido é macio e fresquinho. Tem cós elástico que se ajusta bem ao corpo.",
+    "size": "G",
+    "available": true,
+    "tags": ["calça", "G"]
+  },
+  {
+    "name": "Shorts jeans dobradinho (tamanho 40)",
+    "photos": [
+      "images/shorts-40-jeans-01.jpg",
+      "images/shorts-40-jeans-02.jpg"
+    ],
+    "description": "Shorts jeans azul escuro com barra dobrada. O tecido é encorpado, confortável e resistente, com leve desgastado na cor que dá um visual moderno. Possui bolsos frontais e traseiros funcionais e fechamento por botão e zíper.",
+    "size": "M",
+    "available": true,
+    "tags": ["shorts", "M"]
+  },
+  {
+    "name": "Shorts esportivo Under Armour azul-marinho",
+    "photos": ["images/shorts-GG-underarmour-navy-01.jpg"],
+    "description": "Shorts esportivo Under Armour em azul-marinho, com elástico largo estampado na cintura e detalhe branco nas bordas. É leve, respirável e feito para máximo conforto.\n\nO caimento é solto, o tecido é suave e seca rápido.",
+    "size": "GG",
+    "available": true,
+    "tags": ["shorts", "GG"]
+  },
+  {
+    "name": "Short preto texturizado com camada dupla",
+    "photos": [
+      "images/shorts-G-shein-duplo-black-01.jpg",
+      "images/shorts-G-shein-duplo-black-02.jpg"
+    ],
+    "description": "Short preto super delicado, com tecido leve e camada dupla que dá movimento e evita transparência. O caimento é soltinho, confortável e bem feminino.",
+    "size": "G",
+    "available": true,
+    "tags": ["shorts", "G"]
+  },
+  {
+    "name": "Short preto soltinho com textura plissada",
+    "photos": [
+      "images/shorts-G-shein-franzido-black-03.jpg",
+      "images/shorts-G-shein-franzido-black-01.jpg",
+      "images/shorts-G-shein-franzido-black-02.jpg"
+    ],
+    "description": "Short preto confortável e estiloso, feito em tecido leve com textura plissada que dá movimento e um caimento fluido super bonito. Possui cintura elástica com amarração frontal, garantindo ajuste perfeito.",
+    "size": "G",
+    "available": true,
+    "tags": ["shorts", "G"]
+  },
+  {
+    "name": "Short Under Armour Azul Marinho com forro",
+    "photos": [
+      "images/shorts-G-underarmour-navy-01.jpg",
+      "images/shorts-G-underarmour-navy-02.jpg"
+    ],
+    "description": "Short esportivo azul marinho da Under Armour, modelo com forro interno. Cós com ajuste por cordão, detalhe branco nas laterais e logo icônico da marca.\nLevinho, confortável e seca super rápido.",
+    "size": "G",
+    "available": true,
+    "tags": ["shorts", "G"]
+  },
+  {
+    "name": "Saia Toalha Off-White",
+    "photos": ["images/skirt-G-oldnavy-towel-01.jpg"],
+    "description": "Saia estilo toalha em tom off-white, super macia e confortável. Possui cós elástico largo, caimento soltinho e tecido tipo felpa, perfeito para usar após o banho, na praia/piscina, ou simplesmente para ficar confortável em casa.",
+    "size": "G",
+    "available": true,
+    "tags": ["saia", "G"]
+  },
+  {
+    "name": "Saia Midi Preta Texturizada",
+    "photos": ["images/skirt-M-oldnavy-black.jpg"],
+    "description": "Saia preta com tecido texturizado e caimento soltinho, super confortável e versátil. Possui cós elástico e comprimento midi.",
+    "size": "M",
+    "available": true,
+    "tags": ["saia", "M"]
+  },
+  {
+    "name": "Regata Bege Básica",
+    "photos": ["images/tanktop-G-beige-01.jpg"],
+    "description": "Regata bege de alcinhas finas, tecido macio e levinho, perfeita para o dia a dia. Caimento mais justo e confortável, ótima para usar sozinha nos dias quentes ou como segunda camada por baixo de camisas e casacos.",
+    "size": "G",
+    "available": true,
+    "tags": ["blusa", "G"]
+  },
+  {
+    "name": "Regata Esportiva Azul Marinho",
+    "photos": ["images/tanktop-GG-navy-01.jpg"],
+    "description": "Regata esportiva azul marinho, modelo nadador, feita em tecido leve e respirável.",
+    "size": "GG",
+    "available": true,
+    "tags": ["blusa", "GG"]
+  },
+  {
+    "name": "Regata Preta Básica",
+    "photos": [
+      "images/tanktop-G-marisa-black-01.jpg",
+      "images/tanktop-G-marisa-black-02.jpg"
+    ],
+    "description": "Regata preta básica com decote V, em tecido leve e macio. Tem caimento soltinho e super confortável.",
+    "size": "G",
+    "available": true,
+    "tags": ["blusa", "G"]
+  },
+  {
+    "name": "Camiseta Preta – GG (Chico Rei – Clube da Esquina)",
+    "photos": [
+      "images/tshirt-GG-chicorei-clubeesquina-01.jpg",
+      "images/tshirt-GG-chicorei-clubeesquina-02.jpg"
+    ],
+    "description": "Camiseta preta da Chico Rei, edição especial Clube da Esquina. A malha é macia, veste soltinha e confortável.",
+    "size": "GG",
+    "available": true,
+    "tags": ["camiseta", "GG"]
+  },
+  {
+    "name": "Camiseta Preta – GG (Chico Rei – Hocus Pocus / Gato Preto)",
+    "photos": [
+      "images/tshirt-GG-chicorei-hocuspocus-01.jpg",
+      "images/tshirt-GG-chicorei-hocuspocus-02.jpg"
+    ],
+    "description": "Camiseta preta da Chico Rei com estampa temática Hocus Pocus. Malha macia, confortável e com caimento soltinho.",
+    "size": "GG",
+    "available": true,
+    "tags": ["camiseta", "GG"]
+  },
+  {
+    "name": "Camiseta Preta – GG molde feminino (Chico Rei – Je ne Regrette Rien)",
+    "photos": [
+      "images/tshirt-GG-chicorei-jeneregrette-01.jpg",
+      "images/tshirt-GG-chicorei-jeneregrette-02.jpg"
+    ],
+    "description": "Camiseta preta da Chico Rei com frase em francês estampada na frente: "Je ne regrette rien". A malha é macia e confortável, vestindo soltinho.",
+    "size": "GG",
+    "available": true,
+    "tags": ["camiseta", "GG"]
+  },
+  {
+    "name": "Camiseta Preta – GG molde feminino (Nerd Universe – Evil Cat)",
+    "photos": [
+      "images/tshirt-GG-nerduniverse-evilcat-01.jpg",
+      "images/tshirt-GG-nerduniverse-evilcat-02.jpg"
+    ],
+    "description": "Camiseta preta da Nerd Universe com estampa de gatinho demoníaco fofo-malvado sentado num pentagrama estilizado.",
+    "size": "GG",
+    "available": true,
+    "tags": ["camiseta", "GG"]
+  },
+  {
+    "name": "Camiseta Off-White – GG (Nerd Universe – Herbology)",
+    "photos": ["images/tshirt-GG-nerduniverse-herbology-01.jpg"],
+    "description": "Camiseta em tom off-white da Nerd Universe, com estampa temática de Herbology num estilo quase de manual ilustrado.",
+    "size": "GG",
+    "available": true,
+    "tags": ["camiseta", "GG"]
+  },
+  {
+    "name": "Camiseta Preta – GG (Nerd Universe – Howl's Moving Castle)",
+    "photos": [
+      "images/tshirt-GG-nerduniverse-howlscastle-01.jpg",
+      "images/tshirt-GG-nerduniverse-howlscastle-02.jpg"
+    ],
+    "description": "Camiseta preta da Nerd Universe, estampa inspirada em O Castelo Animado.",
+    "size": "GG",
+    "available": true,
+    "tags": ["camiseta", "GG"]
+  },
+  {
+    "name": "Camiseta Preta – GG (Nerd Universe – "How to Destroy Humans")",
+    "photos": [
+      "images/tshirt-GG-nerduniverse-howtocat-01.jpg",
+      "images/tshirt-GG-nerduniverse-howtocat-02.jpg",
+      "images/tshirt-GG-nerduniverse-howtocat-03.jpg",
+      "images/tshirt-GG-nerduniverse-howtocat-04.jpg"
+    ],
+    "description": "Camiseta preta da Nerd Universe, com aquela vibe divertida e levemente maléfica que só um gatinho fofo tramando a queda da humanidade consegue transmitir.",
+    "size": "GG",
+    "available": true,
+    "tags": ["camiseta", "GG"]
+  },
+  {
+    "name": "Camiseta Preta – GG (Nerd Universe – Nekomancer)",
+    "photos": ["images/tshirt-GG-nerduniverse-nekomancer-01.jpg"],
+    "description": "Camiseta preta da Nerd Universe com estampa colorida de "Nekomancer", mostrando um gatinho mago conjurando gatos fantasma. Vibe divertida, nerd e estilosa, perfeita para quem ama humor místico com felinos.",
+    "size": "GG",
+    "available": true,
+    "tags": ["camiseta", "GG"]
+  },
+  {
+    "name": "Camiseta preta "BRITNEY" (M Unissex)",
+    "photos": [
+      "images/tshirt-GG-official-britney-01.jpg",
+      "images/tshirt-GG-official-britney-02.jpg",
+      "images/tshirt-GG-official-britney-03.jpg"
+    ],
+    "description": "Camiseta oficial com estampa da Britney sentada, bem icônica. A malha está em bom estado, porém as letras da estampa têm desgaste visível (um pouco levantadas/rachadinhas). Ainda assim, super estilosa para looks casuais.",
+    "size": "M",
+    "available": true,
+    "tags": ["camiseta", "M"]
+  },
+  {
+    "name": "Camiseta verde "Skull the Frog" – GG (oversized)",
+    "photos": [
+      "images/tshirt-GG-shein-frog-01.jpg",
+      "images/tshirt-GG-shein-frog-02.jpg"
+    ],
+    "description": "Modelo bem amplo, confortável e estiloso. Estampa delicada de sapo com flores e cogumelos, num verde oliva fácil de combinar. Perfeita para looks casuais e soltinhos.",
+    "size": "GG",
+    "available": true,
+    "tags": ["camiseta", "GG"]
+  },
+  {
+    "name": "Camiseta Harry Potter – G",
+    "photos": ["images/tshirt-G-official-hpglasses-01.jpg"],
+    "description": "Vermelha com estampa dourada dos óculos e cicatriz do Harry. Produto oficial, leve e confortável. Perfeita para fãs.",
+    "size": "G",
+    "available": true,
+    "tags": ["camiseta", "G"]
+  },
+  {
+    "name": "Camiseta Shein Fantasminhas – G",
+    "photos": ["images/tshirt-G-shein-beigeghosts-01.jpg"],
+    "description": "Bege clara com estampa fofa de vários fantasminhas. Tecido leve e macio, bem confortável.",
+    "size": "G",
+    "available": true,
+    "tags": ["camiseta", "G"]
+  },
+  {
+    "name": "Camiseta Chico Rei - Horror Cats – Unissex M",
+    "photos": ["images/tshirt-M-chicorei-horrorcats-01.jpg"],
+    "description": "Preta com estampas dos "gatíneos" dos filmes de terror. Malha macia e veste soltinha.",
+    "size": "M",
+    "available": true,
+    "tags": ["camiseta", "M"]
+  },
+  {
+    "name": "Camiseta M. Officer - Game Boy – M",
+    "photos": ["images/tshirt-M-mofficer-gameboy-01.jpg"],
+    "description": "Preta com estampa minimalista de Game Boy em branco. Modelagem soltinha e confortável.",
+    "size": "M",
+    "available": true,
+    "tags": ["camiseta", "M"]
+  }
 ]
