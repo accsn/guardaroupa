@@ -1,7 +1,3 @@
-/* ---------------------------------------
-    GLOBAL DATA
---------------------------------------- */
-
 let allProducts = [];
 let filteredProducts = [];
 
@@ -17,27 +13,18 @@ const typeList = [
   "vestido"
 ];
 
-/* ---------------------------------------
-    LOAD PRODUCTS
---------------------------------------- */
-
+// LOAD PRODUCTS
 async function loadProducts() {
   const res = await fetch("products.json");
   const data = await res.json();
-
   allProducts = data;
   filteredProducts = data;
-
   renderFilters();
   renderProducts();
 }
 
-loadProducts();
 
-/* ---------------------------------------
-    FILTERS
---------------------------------------- */
-
+// RENDER FILTER BUTTONS
 function renderFilters() {
   const container = document.getElementById("type-filters");
   container.innerHTML = "";
@@ -49,182 +36,90 @@ function renderFilters() {
     btn.textContent = type;
 
     btn.addEventListener("click", () => {
-      const active = btn.classList.contains("active");
-
       document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
-      if (!active) btn.classList.add("active");
+      btn.classList.add("active");
 
-      applyFilters();
+      filteredProducts = allProducts.filter(p => p.tags.includes(type));
+      renderProducts();
     });
 
     container.appendChild(btn);
   });
 
-  document.getElementById("size-filter").addEventListener("change", applyFilters);
-}
-
-function applyFilters() {
-  const activeTypeBtn = document.querySelector(".filter-btn.active");
-  const selectedType = activeTypeBtn ? activeTypeBtn.dataset.type : "";
-  const selectedSize = document.getElementById("size-filter").value;
-
-  filteredProducts = allProducts.filter(p => {
-    const matchType = selectedType ? p.tags.includes(selectedType) : true;
-    const matchSize = selectedSize ? p.tags.includes(selectedSize) : true;
-    return matchType && matchSize;
+  const showAll = document.createElement("button");
+  showAll.textContent = "todos";
+  showAll.classList.add("filter-btn", "active");
+  showAll.addEventListener("click", () => {
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    showAll.classList.add("active");
+    filteredProducts = allProducts;
+    renderProducts();
   });
 
-  renderProducts();
+  container.appendChild(showAll);
 }
 
-/* ---------------------------------------
-    RENDER PRODUCTS
---------------------------------------- */
 
+// RENDER PRODUCT GRID
 function renderProducts() {
-  const grid = document.getElementById("product-grid");
+  const grid = document.getElementById("products-grid");
   grid.innerHTML = "";
 
   filteredProducts.forEach(product => {
-    const div = document.createElement("div");
-    div.classList.add("product");
+    const card = createProductCard(product);
+    grid.appendChild(card);
+  });
+}
 
-    if (!product.available) {
-      div.classList.add("unavailable");
-    }
 
-    const photosHTML = `
-      <div class="carousel">
-        <button class="carousel-btn left">←</button>
-        <img class="carousel-img"
-             src="images/${product.photos[0]}"
-             data-index="0"
-             alt="${product.name}">
-        <button class="carousel-btn right">→</button>
-      </div>
-    `;
+// CREATE A PRODUCT CARD
+function createProductCard(product) {
+  const card = document.createElement("div");
+  card.classList.add("product-card");
 
-    div.innerHTML = `
-      ${photosHTML}
+  const images = product.photos;
+  const hasMultipleImages = images && images.length > 1;
+
+  card.innerHTML = `
+    <div class="img-wrapper">
+      <img src="${images[0]}" class="main-img" alt="${product.name}">
+      
+      ${hasMultipleImages ? `
+        <button class="arrow left">‹</button>
+        <button class="arrow right">›</button>
+      ` : ""}
+    </div>
+
+    <div class="info">
       <h3>${product.name}</h3>
-      <p>${product.description}</p>
-      <p><strong>Tamanho:</strong> ${product.size}</p>
+      <p class="price">R$ ${product.price ? product.price : "--"}</p>
+      <p class="size">${product.size ? product.size : "tamanho único"}</p>
+    </div>
+  `;
 
-      ${
-        product.available
-          ? `<button class="add-to-cart" data-name="${product.name}">Adicionar à Sacola</button>`
-          : `<span class="unavailable-tag">Indisponível</span>`
-      }
-    `;
+  if (hasMultipleImages) {
+    setupCarousel(card, images);
+  }
 
-    grid.appendChild(div);
-  });
-
-  enableCarousels(filteredProducts);
-  enableLightbox();
-  enableCartButtons();
+  return card;
 }
 
-/* ---------------------------------------
-    CAROUSEL
---------------------------------------- */
 
-function enableCarousels(products) {
-  const carousels = document.querySelectorAll(".carousel");
-  
-  carousels.forEach((carousel, idx) => {
-    const img = carousel.querySelector(".carousel-img");
-    const left = carousel.querySelector(".left");
-    const right = carousel.querySelector(".right");
+// CAROUSEL LOGIC PER CARD
+function setupCarousel(card, images) {
+  const img = card.querySelector(".main-img");
+  const left = card.querySelector(".arrow.left");
+  const right = card.querySelector(".arrow.right");
 
-    const photos = products[idx].photos;
+  let index = 0;
 
-    left.addEventListener("click", () => {
-      let current = parseInt(img.dataset.index);
-      current = (current - 1 + photos.length) % photos.length;
-      img.dataset.index = current;
-      img.src = "images/" + photos[current];
-    });
-
-    right.addEventListener("click", () => {
-      let current = parseInt(img.dataset.index);
-      current = (current + 1) % photos.length;
-      img.dataset.index = current;
-      img.src = "images/" + photos[current];
-    });
-  });
-}
-
-/* ---------------------------------------
-    LIGHTBOX
---------------------------------------- */
-
-function enableLightbox() {
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-
-  document.querySelectorAll(".carousel-img").forEach(img => {
-    img.addEventListener("click", () => {
-      lightboxImg.src = img.src;
-      lightbox.classList.remove("hidden");
-    });
+  right.addEventListener("click", () => {
+    index = (index + 1) % images.length;
+    img.src = images[index];
   });
 
-  lightbox.addEventListener("click", () => {
-    lightbox.classList.add("hidden");
+  left.addEventListener("click", () => {
+    index = (index - 1 + images.length) % images.length;
+    img.src = images[index];
   });
 }
-
-/* ---------------------------------------
-    CART
---------------------------------------- */
-
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-function enableCartButtons() {
-  document.querySelectorAll(".add-to-cart").forEach(btn => {
-    btn.addEventListener("click", e => {
-      const item = e.target.dataset.name;
-      cart.push(item);
-      localStorage.setItem("cart", JSON.stringify(cart));
-      updateCartCount();
-    });
-  });
-}
-
-const cartCount = document.getElementById("cart-count");
-
-function updateCartCount() {
-  cartCount.textContent = cart.length;
-}
-
-const drawer = document.getElementById("cart-drawer");
-
-document.getElementById("cart-button").addEventListener("click", () => {
-  renderCart();
-  drawer.classList.remove("hidden");
-  drawer.classList.add("open");
-});
-
-document.getElementById("close-cart").addEventListener("click", () => {
-  drawer.classList.remove("open");
-  drawer.classList.add("hidden");
-});
-
-function renderCart() {
-  const list = document.getElementById("cart-items");
-  list.innerHTML = "";
-  cart.forEach(item => {
-    const li = document.createElement("li");
-    li.textContent = item;
-    list.appendChild(li);
-  });
-}
-
-/* ---------------------------------------
-    CHECKOUT FORM
---------------------------------------- */
-
-document.getElementById("checkout-form").addEventListener("submit", () => {
-  document.getElementById("order-field").value = cart.join(", ");
-});
