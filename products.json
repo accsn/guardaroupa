@@ -1,12 +1,19 @@
 [
+
   {
-    "name": "Camiseta G Nerduniverse – Nekomancer",
-    "photos": [
-      "tshirt-G-nerduniverse-nekomancer-01.jpg",
-      "tshirt-G-nerduniverse-nekomancer-02.jpg"
-    ],
-    "size": "G",
-    "available": true,
-    "tags": ["camiseta", "G"]
-  }
+  "name": "Bolsa Transversal - Imaginarium - Preta",
+  "photos": [
+    "bag-imaginarium-crossbody-01.jpg",
+    "bag-imaginarium-crossbody-02.jpg",
+    "bag-imaginarium-crossbody-03.jpg"
+  ],
+  "description": "Bolsa tiracolo preta, compacta e prática, com vários bolsos e detalhes discretos em roxo. Perfeita para o dia a dia e super leve de usar.\n\n– Material resistente\n– Alça ajustável\n– Compartimento frontal com zíper\n– Tamanho único",
+  "size": "U",
+  "available": true,
+  "tags": [
+    "acessórios",
+    "U"
+  ]
+}
+
 ]
