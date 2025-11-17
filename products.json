@@ -28,6 +28,21 @@
     "blusa",
     "GG"
   ]
+},
+
+{
+  "name": "Vestido vermelho de poá (rodadinho)",
+  "photos": [
+    "dress-G-polkadot-red-01.jpg",
+    "dress-G-polkadot-red-02.jpg"
+  ],
+  "description": "Vestido vermelho de poá, leve e rodadinho, com decote arredondado e alças largas super confortáveis. Tem um caimento fofíssimo e aquela cara de look fácil que resolve o dia inteiro.",
+  "size": "G",
+  "available": false,
+  "tags": [
+    "vestido",
+    "G"
+  ]
 }
 
 ]
