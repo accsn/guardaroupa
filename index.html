@@ -17,7 +17,7 @@
     🛒 <span id="cart-count">0</span>
   </button>
   <button id="back-to-top">↑</button>
-  
+
 <!-- FILTERS -->
 <section id="filters">
   <div id="type-filters">
@@ -43,9 +43,9 @@
   <h2>Sua Sacola</h2>
   <ul id="cart-items"></ul>
 
-  <form id="checkout-form" netlify>
-    <input type="text" name="name" placeholder="Seu nome" required />
-    <input type="text" name="contact" placeholder="Instagram ou WhatsApp…" required />
+<form id="checkout-form" action="https://formspree.io/f/myzlrkbw" method="POST">
+    <input type="text" name="name" placeholder="Seu nome:" required />
+    <input type="text" name="contact" placeholder="Nº de Celular:" required />
     <textarea name="note" placeholder="Alguma observação?"></textarea>
     <input type="hidden" name="order" id="order-field" />
     <button type="submit">Enviar Pedido</button>

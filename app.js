@@ -301,7 +301,28 @@ window.addEventListener("keydown", (e) => {
   }
 });
 
+const checkoutForm = document.getElementById("checkout-form");
 
+checkoutForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
+  const formData = new FormData(checkoutForm);
+
+  const response = await fetch("https://formspree.io/f/myzlrkbw", {
+    method: "POST",
+    body: formData,
+    headers: { Accept: "application/json" }
+  });
+
+  if (response.ok) {
+    alert("Pedido enviado! Vou ver e te respondo 💛");
+    cart = [];
+    updateCartCount();
+    renderCart();
+    closeCartDrawer();
+  } else {
+    alert("Ocorreu um erro ao enviar. Tenta de novo?");
+  }
+});
 
 loadProducts();
