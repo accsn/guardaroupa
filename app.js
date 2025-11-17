@@ -22,7 +22,7 @@ async function loadProducts() {
     renderFilters();
     renderProducts();
   } catch (error) {
-    console.error("Erro ao carregar produtos:", error);
+    console.error('Erro ao carregar produtos:', error);
     document.getElementById("products-grid").innerHTML = "<p>Erro ao carregar produtos. Verifique se o arquivo products.json está no mesmo diretório.</p>";
   }
 }
