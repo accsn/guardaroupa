@@ -123,11 +123,12 @@ header h1 {
 }
 
 .product {
-  background: white;
+  background: #f3e2bb;  
   padding: 1rem;
   border-radius: 14px;
-  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+  box-shadow: 0 2px 6px rgba(63, 42, 24, .25); /* using your deep brown */
   transition: transform .15s ease;
+  filter: sepia(0.25) brightness(1.05) contrast(0.95);
 }
 
 .product:hover {
