@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guarda-Roupa da Anna</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Fontes 70s -->
   <link href="https://fonts.googleapis.com/css2?family=Cooper+Black&family=Kumbh+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -16,9 +14,24 @@
   <button id="cart-button">🛒 <span id="cart-count">0</span></button>
 </header>
 
-<main id="product-grid" class="product-grid">
-  <!-- Produtos serão gerados automaticamente -->
-</main>
+<!-- FILTERS -->
+<section id="filters">
+  <div id="type-filters">
+    <!-- Buttons generated automatically -->
+  </div>
+
+  <div id="size-filter-container">
+    <label for="size-filter">Tamanho:</label>
+    <select id="size-filter">
+      <option value="">Todos</option>
+      <option value="M">M</option>
+      <option value="G">G</option>
+      <option value="GG">GG</option>
+    </select>
+  </div>
+</section>
+
+<main id="product-grid" class="product-grid"></main>
 
 <!-- SACOLA -->
 <div id="cart-drawer" class="hidden">
@@ -29,7 +42,6 @@
     <input type="text" name="name" placeholder="Seu nome" required />
     <input type="text" name="contact" placeholder="Instagram ou WhatsApp…" required />
     <textarea name="note" placeholder="Alguma observação?"></textarea>
-
     <input type="hidden" name="order" id="order-field" />
     <button type="submit">Enviar Pedido</button>
   </form>
