@@ -198,7 +198,6 @@ function renderCart() {
     });
   });
 
-  // texto que vai pro Netlify
   orderField.value = cart
     .map(
       (item, index) =>
@@ -321,36 +320,13 @@ window.addEventListener("keydown", (e) => {
 
 const checkoutForm = document.getElementById("checkout-form");
 
-checkoutForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const formData = new FormData(checkoutForm);
-
-  const response = await fetch("https://formspree.io/f/myzlrkbw", {
-    method: "POST",
-    body: formData,
-    headers: { Accept: "application/json" }
-  });
-
- if (response.ok) {
-  const orderText = document.getElementById("order-field").value;
-
-  // Update your Google Sheet availability via Apps Script
-  fetch("https://script.google.com/macros/s/AKfycbySmByFBnRaaXNTYxIER6Ek69YXdCj7m95eAA2ZJF7kDxJYP2A6vKVo5uRPleLoVSg/exec?order=" 
-        + encodeURIComponent(orderText))
-    .then(() => {
-      alert("Pedido enviado! Vou ver e te respondo 💛");
-      cart = [];
-      updateCartCount();
-      renderCart();
-      closeCartDrawer();
-    })
-    .catch(err => {
-      console.error("Erro ao atualizar planilha:", err);
-      alert("Seu pedido foi enviado, mas houve um erro ao atualizar a disponibilidade. Vou corrigir manualmente 💛");
-    });
-}
-
+checkoutForm.addEventListener("submit", (e) => {
+  alert("Pedido enviado! Vou ver e te respondo 💛");
+  cart = [];
+  updateCartCount();
+  renderCart();
+  closeCartDrawer();
 });
+
 
 loadProducts();
