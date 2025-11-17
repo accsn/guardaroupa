@@ -18,9 +18,9 @@ async function loadProducts() {
   const res = await fetch("products.json");
   const data = await res.json();
   allProducts = data;
-  filteredProducts = data;
+  filteredProducts = data;  // show everything first
   renderFilters();
-  renderProducts();
+  renderProducts();         // render immediately, no filters yet
 }
 
 
