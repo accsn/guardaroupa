@@ -6,7 +6,7 @@
       "images/bag-imaginarium-crossbody-02.jpg",
       "images/bag-imaginarium-crossbody-03.jpg"
     ],
-    "description": "Bolsa tiracolo preta, compacta e prática, com vários bolsos e detalhes discretos em roxo. Perfeita para o dia a dia e super leve de usar.\n\n– Material resistente\n– Alça ajustável\n– Compartimento frontal com zíper\n– Tamanho único",
+    "description": "Bolsa tiracolo preta, compacta e prática, com vários bolsos e detalhes discretos em roxo. Perfeita para o dia a dia e super leve de usar. Material resistente, alça ajustável, compartimento frontal com zíper, tamanho único",
     "size": "U",
     "available": true,
     "tags": ["acessórios", "U"]
@@ -118,7 +118,7 @@
   {
     "name": "Shorts esportivo Under Armour azul-marinho",
     "photos": ["images/shorts-GG-underarmour-navy-01.jpg"],
-    "description": "Shorts esportivo Under Armour em azul-marinho, com elástico largo estampado na cintura e detalhe branco nas bordas. É leve, respirável e feito para máximo conforto.\n\nO caimento é solto, o tecido é suave e seca rápido.",
+    "description": "Shorts esportivo Under Armour em azul-marinho, com elástico largo estampado na cintura e detalhe branco nas bordas. É leve, respirável e feito para máximo conforto. O caimento é solto, o tecido é suave e seca rápido.",
     "size": "GG",
     "available": true,
     "tags": ["shorts", "GG"]
@@ -152,7 +152,7 @@
       "images/shorts-G-underarmour-navy-01.jpg",
       "images/shorts-G-underarmour-navy-02.jpg"
     ],
-    "description": "Short esportivo azul marinho da Under Armour, modelo com forro interno. Cós com ajuste por cordão, detalhe branco nas laterais e logo icônico da marca.\nLevinho, confortável e seca super rápido.",
+    "description": "Short esportivo azul marinho da Under Armour, modelo com forro interno. Cós com ajuste por cordão, detalhe branco nas laterais e logo icônico da marca. Levinho, confortável e seca super rápido.",
     "size": "G",
     "available": true,
     "tags": ["shorts", "G"]
@@ -201,7 +201,7 @@
     "tags": ["blusa", "G"]
   },
   {
-    "name": "Camiseta Preta – GG (Chico Rei – Clube da Esquina)",
+    "name": "Camiseta Preta GG (Chico Rei - Clube da Esquina)",
     "photos": [
       "images/tshirt-GG-chicorei-clubeesquina-01.jpg",
       "images/tshirt-GG-chicorei-clubeesquina-02.jpg"
@@ -212,7 +212,7 @@
     "tags": ["camiseta", "GG"]
   },
   {
-    "name": "Camiseta Preta – GG (Chico Rei – Hocus Pocus / Gato Preto)",
+    "name": "Camiseta Preta GG (Chico Rei - Hocus Pocus / Gato Preto)",
     "photos": [
       "images/tshirt-GG-chicorei-hocuspocus-01.jpg",
       "images/tshirt-GG-chicorei-hocuspocus-02.jpg"
@@ -223,18 +223,18 @@
     "tags": ["camiseta", "GG"]
   },
   {
-    "name": "Camiseta Preta – GG molde feminino (Chico Rei – Je ne Regrette Rien)",
+    "name": "Camiseta Preta GG molde feminino (Chico Rei - Je ne Regrette Rien)",
     "photos": [
       "images/tshirt-GG-chicorei-jeneregrette-01.jpg",
       "images/tshirt-GG-chicorei-jeneregrette-02.jpg"
     ],
-    "description": "Camiseta preta da Chico Rei com frase em francês estampada na frente: "Je ne regrette rien". A malha é macia e confortável, vestindo soltinho.",
+    "description": "Camiseta preta da Chico Rei com frase em francês estampada na frente. A malha é macia e confortável, vestindo soltinho.",
     "size": "GG",
     "available": true,
     "tags": ["camiseta", "GG"]
   },
   {
-    "name": "Camiseta Preta – GG molde feminino (Nerd Universe – Evil Cat)",
+    "name": "Camiseta Preta GG molde feminino (Nerd Universe - Evil Cat)",
     "photos": [
       "images/tshirt-GG-nerduniverse-evilcat-01.jpg",
       "images/tshirt-GG-nerduniverse-evilcat-02.jpg"
@@ -245,7 +245,7 @@
     "tags": ["camiseta", "GG"]
   },
   {
-    "name": "Camiseta Off-White – GG (Nerd Universe – Herbology)",
+    "name": "Camiseta Off-White GG (Nerd Universe - Herbology)",
     "photos": ["images/tshirt-GG-nerduniverse-herbology-01.jpg"],
     "description": "Camiseta em tom off-white da Nerd Universe, com estampa temática de Herbology num estilo quase de manual ilustrado.",
     "size": "GG",
@@ -253,7 +253,7 @@
     "tags": ["camiseta", "GG"]
   },
   {
-    "name": "Camiseta Preta – GG (Nerd Universe – Howl's Moving Castle)",
+    "name": "Camiseta Preta GG (Nerd Universe - Howl's Moving Castle)",
     "photos": [
       "images/tshirt-GG-nerduniverse-howlscastle-01.jpg",
       "images/tshirt-GG-nerduniverse-howlscastle-02.jpg"
@@ -264,7 +264,7 @@
     "tags": ["camiseta", "GG"]
   },
   {
-    "name": "Camiseta Preta – GG (Nerd Universe – "How to Destroy Humans")",
+    "name": "Camiseta Preta GG (Nerd Universe - How to Destroy Humans)",
     "photos": [
       "images/tshirt-GG-nerduniverse-howtocat-01.jpg",
       "images/tshirt-GG-nerduniverse-howtocat-02.jpg",
@@ -277,15 +277,15 @@
     "tags": ["camiseta", "GG"]
   },
   {
-    "name": "Camiseta Preta – GG (Nerd Universe – Nekomancer)",
+    "name": "Camiseta Preta GG (Nerd Universe - Nekomancer)",
     "photos": ["images/tshirt-GG-nerduniverse-nekomancer-01.jpg"],
-    "description": "Camiseta preta da Nerd Universe com estampa colorida de "Nekomancer", mostrando um gatinho mago conjurando gatos fantasma. Vibe divertida, nerd e estilosa, perfeita para quem ama humor místico com felinos.",
+    "description": "Camiseta preta da Nerd Universe com estampa colorida de Nekomancer, mostrando um gatinho mago conjurando gatos fantasma. Vibe divertida, nerd e estilosa, perfeita para quem ama humor místico com felinos.",
     "size": "GG",
     "available": true,
     "tags": ["camiseta", "GG"]
   },
   {
-    "name": "Camiseta preta "BRITNEY" (M Unissex)",
+    "name": "Camiseta preta BRITNEY (M Unissex)",
     "photos": [
       "images/tshirt-GG-official-britney-01.jpg",
       "images/tshirt-GG-official-britney-02.jpg",
@@ -297,7 +297,7 @@
     "tags": ["camiseta", "M"]
   },
   {
-    "name": "Camiseta verde "Skull the Frog" – GG (oversized)",
+    "name": "Camiseta verde Skull the Frog GG (oversized)",
     "photos": [
       "images/tshirt-GG-shein-frog-01.jpg",
       "images/tshirt-GG-shein-frog-02.jpg"
@@ -308,7 +308,7 @@
     "tags": ["camiseta", "GG"]
   },
   {
-    "name": "Camiseta Harry Potter – G",
+    "name": "Camiseta Harry Potter G",
     "photos": ["images/tshirt-G-official-hpglasses-01.jpg"],
     "description": "Vermelha com estampa dourada dos óculos e cicatriz do Harry. Produto oficial, leve e confortável. Perfeita para fãs.",
     "size": "G",
@@ -316,7 +316,7 @@
     "tags": ["camiseta", "G"]
   },
   {
-    "name": "Camiseta Shein Fantasminhas – G",
+    "name": "Camiseta Shein Fantasminhas G",
     "photos": ["images/tshirt-G-shein-beigeghosts-01.jpg"],
     "description": "Bege clara com estampa fofa de vários fantasminhas. Tecido leve e macio, bem confortável.",
     "size": "G",
@@ -324,15 +324,15 @@
     "tags": ["camiseta", "G"]
   },
   {
-    "name": "Camiseta Chico Rei - Horror Cats – Unissex M",
+    "name": "Camiseta Chico Rei - Horror Cats (Unissex M)",
     "photos": ["images/tshirt-M-chicorei-horrorcats-01.jpg"],
-    "description": "Preta com estampas dos "gatíneos" dos filmes de terror. Malha macia e veste soltinha.",
+    "description": "Preta com estampas dos gatíneos dos filmes de terror. Malha macia e veste soltinha.",
     "size": "M",
     "available": true,
     "tags": ["camiseta", "M"]
   },
   {
-    "name": "Camiseta M. Officer - Game Boy – M",
+    "name": "Camiseta M. Officer - Game Boy M",
     "photos": ["images/tshirt-M-mofficer-gameboy-01.jpg"],
     "description": "Preta com estampa minimalista de Game Boy em branco. Modelagem soltinha e confortável.",
     "size": "M",
