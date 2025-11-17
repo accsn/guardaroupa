@@ -62,7 +62,7 @@ function renderFilters() {
 
 // RENDER PRODUCT GRID
 function renderProducts() {
-  const grid = document.getElementById("products-grid");
+  const grid = document.getElementById("product-grid");
   grid.innerHTML = "";
 
   filteredProducts.forEach(product => {
