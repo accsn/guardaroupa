@@ -423,52 +423,51 @@ if (checkoutForm) {
     console.log("Cart items:", cart);
     console.log("Product names to mark unavailable:", productNames);
     console.log("Order field value:", orderField.value);
-    console.log("Form data:");
     
-    // Log all form fields
-    const formData = new FormData(checkoutForm);
-    for (let [key, value] of formData.entries()) {
-      console.log(`  ${key}: ${value}`);
+    // Create a hidden iframe for form submission if it doesn't exist
+    let iframe = document.querySelector('iframe[name="hidden_iframe"]');
+    if (!iframe) {
+      iframe = document.createElement('iframe');
+      iframe.name = 'hidden_iframe';
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
     }
     
-    // Try to mark products as unavailable via API
-    await markProductsUnavailable(productNames);
+    // Mark products as unavailable via API (don't wait for it)
+    markProductsUnavailable(productNames);
     
-    // Submit the form to Google Forms
-    try {
-      await fetch(checkoutForm.action, {
-        method: "POST",
-        body: formData,
-        mode: "no-cors"
-      });
-      console.log("Form submitted successfully");
-    } catch (err) {
-      console.log("Form submission error (expected with no-cors):", err);
-    }
+    // Submit the form the traditional way (let it complete in iframe)
+    checkoutForm.target = 'hidden_iframe';
+    checkoutForm.submit();
     
-    alert("Pedido enviado! Vou ver e te respondo 💛");
+    console.log("Form submitted to iframe");
     
-    // Mark items as unavailable locally (optimistic update)
-    productNames.forEach(name => {
-      const product = allProducts.find(p => p.name === name);
-      if (product) {
-        product.available = false;
-      }
-    });
-    
-    // Clear cart and refresh
-    cart = [];
-    updateCartCount();
-    renderCart();
-    closeCartDrawer();
-    
-    // Re-render to show items as unavailable
-    applySizeFilter();
-    
-    // Refresh from server after a delay
+    // Show success message immediately
     setTimeout(() => {
-      loadProducts(true);
-    }, 2000);
+      alert("Pedido enviado! Vou ver e te respondo 💛");
+      
+      // Mark items as unavailable locally (optimistic update)
+      productNames.forEach(name => {
+        const product = allProducts.find(p => p.name === name);
+        if (product) {
+          product.available = false;
+        }
+      });
+      
+      // Clear cart and refresh
+      cart = [];
+      updateCartCount();
+      renderCart();
+      closeCartDrawer();
+      
+      // Re-render to show items as unavailable
+      applySizeFilter();
+      
+      // Refresh from server after a delay
+      setTimeout(() => {
+        loadProducts(true);
+      }, 2000);
+    }, 500);
   });
 }
 
