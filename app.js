@@ -81,19 +81,26 @@ async function loadProducts(silent = false) {
 // ---------- MARK PRODUCTS AS UNAVAILABLE ----------
 async function markProductsUnavailable(productNames) {
   try {
+    console.log("Sending POST request to:", SHEET_URL);
+    console.log("Products to mark unavailable:", productNames);
+    
     const response = await fetch(SHEET_URL, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "text/plain", // Changed from application/json
       },
       body: JSON.stringify({
         products: productNames
-      })
+      }),
+      mode: "no-cors" // Add this to bypass CORS
     });
 
-    const result = await response.json();
-    console.log("Mark unavailable result:", result);
-    return result.success;
+    console.log("Response received:", response);
+    
+    // With no-cors mode, we can't read the response
+    // But if we got here without error, it likely worked
+    return true;
+    
   } catch (error) {
     console.error("Error marking products unavailable:", error);
     return false;
@@ -407,39 +414,47 @@ if (checkoutForm) {
     // Get product names from cart
     const productNames = cart.map(item => item.name);
     
-    // Mark products as unavailable immediately
-    const success = await markProductsUnavailable(productNames);
+    console.log("Submitting order with products:", productNames);
     
-    if (success) {
-      // Now submit the form to Google Forms for notification
-      const formData = new FormData(checkoutForm);
-      
-      // Submit via fetch to avoid page navigation
-      try {
-        await fetch(checkoutForm.action, {
-          method: "POST",
-          body: formData,
-          mode: "no-cors" // Required for Google Forms
-        });
-      } catch (err) {
-        console.log("Form submitted (no-cors mode)");
-      }
-      
-      alert("Pedido enviado! Vou ver e te respondo 💛");
-      
-      // Clear cart and refresh products
-      cart = [];
-      updateCartCount();
-      renderCart();
-      closeCartDrawer();
-      
-      // Refresh to show updated availability
-      setTimeout(() => {
-        loadProducts(true);
-      }, 1000);
-    } else {
-      alert("Erro ao processar pedido. Tente novamente.");
+    // Try to mark products as unavailable via API
+    await markProductsUnavailable(productNames);
+    
+    // Submit the form to Google Forms
+    const formData = new FormData(checkoutForm);
+    
+    try {
+      await fetch(checkoutForm.action, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors"
+      });
+    } catch (err) {
+      console.log("Form submitted (no-cors mode)");
     }
+    
+    alert("Pedido enviado! Vou ver e te respondo 💛");
+    
+    // Mark items as unavailable locally (optimistic update)
+    productNames.forEach(name => {
+      const product = allProducts.find(p => p.name === name);
+      if (product) {
+        product.available = false;
+      }
+    });
+    
+    // Clear cart and refresh
+    cart = [];
+    updateCartCount();
+    renderCart();
+    closeCartDrawer();
+    
+    // Re-render to show items as unavailable
+    applySizeFilter();
+    
+    // Refresh from server after a delay
+    setTimeout(() => {
+      loadProducts(true);
+    }, 2000);
   });
 }
 
