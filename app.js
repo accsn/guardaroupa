@@ -280,12 +280,17 @@ function renderCart() {
   });
 
   // Preenche campo escondido do formulário para o Google Forms
-  orderField.value = cart
+  const orderText = cart
     .map(
       (item, index) =>
         `${index + 1}. ${item.name} - tamanho ${item.size || item.s || "U"}`
     )
     .join("\n");
+  
+  orderField.value = orderText;
+  
+  console.log("Order field updated with:", orderText);
+  console.log("Order field element:", orderField);
 }
 
 function openCartDrawer() {
@@ -414,22 +419,31 @@ if (checkoutForm) {
     // Get product names from cart
     const productNames = cart.map(item => item.name);
     
-    console.log("Submitting order with products:", productNames);
+    console.log("=== FORM SUBMISSION DEBUG ===");
+    console.log("Cart items:", cart);
+    console.log("Product names to mark unavailable:", productNames);
+    console.log("Order field value:", orderField.value);
+    console.log("Form data:");
+    
+    // Log all form fields
+    const formData = new FormData(checkoutForm);
+    for (let [key, value] of formData.entries()) {
+      console.log(`  ${key}: ${value}`);
+    }
     
     // Try to mark products as unavailable via API
     await markProductsUnavailable(productNames);
     
     // Submit the form to Google Forms
-    const formData = new FormData(checkoutForm);
-    
     try {
       await fetch(checkoutForm.action, {
         method: "POST",
         body: formData,
         mode: "no-cors"
       });
+      console.log("Form submitted successfully");
     } catch (err) {
-      console.log("Form submitted (no-cors mode)");
+      console.log("Form submission error (expected with no-cors):", err);
     }
     
     alert("Pedido enviado! Vou ver e te respondo 💛");
