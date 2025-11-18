@@ -78,6 +78,28 @@ async function loadProducts(silent = false) {
   }
 }
 
+// ---------- MARK PRODUCTS AS UNAVAILABLE ----------
+async function markProductsUnavailable(productNames) {
+  try {
+    const response = await fetch(SHEET_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        products: productNames
+      })
+    });
+
+    const result = await response.json();
+    console.log("Mark unavailable result:", result);
+    return result.success;
+  } catch (error) {
+    console.error("Error marking products unavailable:", error);
+    return false;
+  }
+}
+
 // ---------- AUTO-REFRESH ----------
 function startAutoRefresh() {
   setInterval(() => {
@@ -379,19 +401,45 @@ window.addEventListener("keydown", (e) => {
 
 // ---------- CHECKOUT FORM ----------
 if (checkoutForm) {
-  checkoutForm.addEventListener("submit", (e) => {
-    // O form é enviado automaticamente para o Google Forms via action/target
-    alert("Pedido enviado! Vou ver e te respondo 💛");
+  checkoutForm.addEventListener("submit", async (e) => {
+    e.preventDefault(); // Prevent default form submission
     
-    // Refresh products after a short delay to show updated availability
-    setTimeout(() => {
-      loadProducts(true);
-    }, 2000);
+    // Get product names from cart
+    const productNames = cart.map(item => item.name);
     
-    cart = [];
-    updateCartCount();
-    renderCart();
-    closeCartDrawer();
+    // Mark products as unavailable immediately
+    const success = await markProductsUnavailable(productNames);
+    
+    if (success) {
+      // Now submit the form to Google Forms for notification
+      const formData = new FormData(checkoutForm);
+      
+      // Submit via fetch to avoid page navigation
+      try {
+        await fetch(checkoutForm.action, {
+          method: "POST",
+          body: formData,
+          mode: "no-cors" // Required for Google Forms
+        });
+      } catch (err) {
+        console.log("Form submitted (no-cors mode)");
+      }
+      
+      alert("Pedido enviado! Vou ver e te respondo 💛");
+      
+      // Clear cart and refresh products
+      cart = [];
+      updateCartCount();
+      renderCart();
+      closeCartDrawer();
+      
+      // Refresh to show updated availability
+      setTimeout(() => {
+        loadProducts(true);
+      }, 1000);
+    } else {
+      alert("Erro ao processar pedido. Tente novamente.");
+    }
   });
 }
 
