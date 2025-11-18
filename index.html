@@ -15,6 +15,7 @@
   />
 </head>
 <body>
+
   <!-- TOPO / LOGO -->
   <header>
     <img src="images/logo.png" alt="Brechó da Anna - Só que de Graça" class="site-logo" />
@@ -29,37 +30,32 @@
 
   <!-- FILTROS -->
   <section id="filters">
-    <div id="type-filters" class="pill-filters"></div>
-
-    <div id="size-filters" class="pill-filters">
-      <button class="size-filter active" data-size="all">Todos tamanhos</button>
-      <button class="size-filter" data-size="PP">PP</button>
-      <button class="size-filter" data-size="P">P</button>
-      <button class="size-filter" data-size="M">M</button>
-      <button class="size-filter" data-size="G">G</button>
-      <button class="size-filter" data-size="GG">GG</button>
-      <button class="size-filter" data-size="U">U</button>
+    <div id="type-filters">
+      <!-- Botões de tipo gerados via JS -->
     </div>
 
-    <div id="tag-filters" class="pill-filters"></div>
+    <div id="size-filter-container">
+      <label for="size-filter">Tamanho:</label>
+      <select id="size-filter">
+        <option value="">Todos</option>
+        <option value="U">U (único)</option>
+        <option value="M">M</option>
+        <option value="G">G</option>
+        <option value="GG">GG</option>
+      </select>
+    </div>
   </section>
 
-  <!-- GRADE DE PRODUTOS -->
-  <main>
-    <section id="products-grid"></section>
-  </main>
+  <!-- GRID DE PRODUTOS -->
+  <main id="products-grid" class="product-grid"></main>
 
   <!-- SACOLA LATERAL -->
   <div id="cart-drawer" class="hidden">
-    <h2>Sua sacola</h2>
+    <h2>Sua Sacola</h2>
+
     <ul id="cart-items"></ul>
-    <p id="cart-empty-message">Sua sacola está vazia 💛</p>
 
-    <div id="cart-summary">
-      <p id="cart-count-text"></p>
-    </div>
-
-    <!-- FORMULÁRIO PARA ENVIAR O PEDIDO (GOOGLE FORMS) -->
+    <!-- FORMULÁRIO ENVIADO PARA O GOOGLE FORMS -->
     <form
       id="checkout-form"
       action="https://docs.google.com/forms/d/e/1FAIpQLSeHwpIWAkPO-2TjDDbzojZBc5nyR-5li61cORphSjUCka6_fQ/formResponse"
@@ -68,26 +64,24 @@
     >
       <input
         type="text"
-        name="entry.339859136"
+        name="entry.601415347"
         placeholder="Seu nome:"
         required
       />
 
       <input
         type="text"
-        name="entry.1578529997"
+        name="entry.670905787"
         placeholder="Nº de Celular:"
         required
       />
 
       <textarea
-        name="entry.1534696098"
+        name="entry.365486615"
         placeholder="Alguma observação?"
       ></textarea>
 
       <!-- campo escondido onde o JS coloca a lista de itens -->
-      <!-- ATENÇÃO: troque ENTRY_ITENS_AQUI pelo ID correto da pergunta "Itens selecionados:"
-           do seu Google Form (via link pré-preenchido: veja o entry.xxxxx correspondente). -->
       <textarea
         name="entry.1097349931"
         id="order-field"
@@ -97,7 +91,7 @@
       <button type="submit">Enviar Pedido</button>
     </form>
 
-    <!-- iframe escondido para submissão silenciosa -->
+    <!-- iframe invisível para não sair da página ao enviar o form -->
     <iframe name="hidden_iframe" style="display:none;"></iframe>
 
     <!-- botão para fechar a sacola (usado no JS) -->
