@@ -87,18 +87,15 @@ async function markProductsUnavailable(productNames) {
     const response = await fetch(SHEET_URL, {
       method: "POST",
       headers: {
-        "Content-Type": "text/plain", // Changed from application/json
+        "Content-Type": "text/plain",
       },
       body: JSON.stringify({
         products: productNames
       }),
-      mode: "no-cors" // Add this to bypass CORS
+      mode: "no-cors"
     });
 
     console.log("Response received:", response);
-    
-    // With no-cors mode, we can't read the response
-    // But if we got here without error, it likely worked
     return true;
     
   } catch (error) {
@@ -422,13 +419,30 @@ if (checkoutForm) {
   checkoutForm.addEventListener("submit", async (e) => {
     e.preventDefault(); // Prevent default form submission
     
-    // Get product names from cart
-    const productNames = cart.map(item => item.name);
+    // Save cart data NOW before we do anything else
+    const savedCart = cart.map(item => ({...item}));
+    const productNames = savedCart.map(item => item.name);
+    
+    // Create the order text and set it ONCE
+    const orderText = savedCart
+      .map((item, index) => 
+        `${index + 1}. ${item.name} - tamanho ${item.size || item.s || "U"}`
+      )
+      .join("\n");
+    
+    orderField.value = orderText;
     
     console.log("=== FORM SUBMISSION DEBUG ===");
-    console.log("Cart items:", cart);
+    console.log("Saved cart items:", savedCart);
     console.log("Product names to mark unavailable:", productNames);
     console.log("Order field value:", orderField.value);
+    
+    // Verify all form fields have values
+    const formData = new FormData(checkoutForm);
+    console.log("=== ALL FORM DATA ===");
+    for (let [key, value] of formData.entries()) {
+      console.log(`${key}: ${value}`);
+    }
     
     // Create a hidden iframe for form submission if it doesn't exist
     let iframe = document.querySelector('iframe[name="hidden_iframe"]');
@@ -439,41 +453,45 @@ if (checkoutForm) {
       document.body.appendChild(iframe);
     }
     
-    // Mark products as unavailable via API (don't wait for it)
+    // Listen for iframe load to know when submission is complete
+    iframe.onload = function() {
+      console.log("Form submission completed!");
+      
+      setTimeout(() => {
+        alert("Pedido enviado! Vou ver e te respondo 💛");
+        
+        // Mark items as unavailable locally (optimistic update)
+        productNames.forEach(name => {
+          const product = allProducts.find(p => p.name === name);
+          if (product) {
+            product.available = false;
+          }
+        });
+        
+        // NOW we can safely clear the cart
+        cart = [];
+        updateCartCount();
+        renderCart();
+        closeCartDrawer();
+        
+        // Re-render to show items as unavailable
+        applySizeFilter();
+        
+        // Refresh from server after a delay
+        setTimeout(() => {
+          loadProducts(true);
+        }, 2000);
+      }, 300);
+    };
+    
+    // Mark products as unavailable via API
     markProductsUnavailable(productNames);
     
-    // Submit the form the traditional way (let it complete in iframe)
+    // Submit the form
     checkoutForm.target = 'hidden_iframe';
     checkoutForm.submit();
     
     console.log("Form submitted to iframe");
-    
-    // Show success message immediately
-    setTimeout(() => {
-      alert("Pedido enviado! Vou ver e te respondo 💛");
-      
-      // Mark items as unavailable locally (optimistic update)
-      productNames.forEach(name => {
-        const product = allProducts.find(p => p.name === name);
-        if (product) {
-          product.available = false;
-        }
-      });
-      
-      // Clear cart and refresh
-      cart = [];
-      updateCartCount();
-      renderCart();
-      closeCartDrawer();
-      
-      // Re-render to show items as unavailable
-      applySizeFilter();
-      
-      // Refresh from server after a delay
-      setTimeout(() => {
-        loadProducts(true);
-      }, 2000);
-    }, 500);
   });
 }
 
