@@ -255,7 +255,7 @@ function updateCartCount() {
 }
 
 function renderCart() {
-  if (!cartItemsList || !orderField) return;
+  if (!cartItemsList) return;
 
   cartItemsList.innerHTML = "";
 
@@ -279,7 +279,13 @@ function renderCart() {
     });
   });
 
-  // Preenche campo escondido do formulário para o Google Forms
+  // Update the hidden field
+  updateOrderField();
+}
+
+function updateOrderField() {
+  if (!orderField) return;
+  
   const orderText = cart
     .map(
       (item, index) =>
@@ -290,7 +296,7 @@ function renderCart() {
   orderField.value = orderText;
   
   console.log("Order field updated with:", orderText);
-  console.log("Order field element:", orderField);
+  console.log("Cart length:", cart.length);
 }
 
 function openCartDrawer() {
