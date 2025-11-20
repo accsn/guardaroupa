@@ -452,16 +452,19 @@ form textarea {
   max-width: 85%;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
 }
 
 #toast.show {
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
   transform: translate(-50%, -50%) scale(1.05);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0s;
 }
 
-#toast::before {
+#toast.show::before {
   content: '';
   position: fixed;
   top: 0;
