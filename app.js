@@ -60,12 +60,16 @@ async function loadProducts(silent = false) {
     }
 
     allProducts = Array.isArray(data) ? data : [];
-    filteredProducts = allProducts.slice();
     lastFetchTime = Date.now();
 
     if (!silent) {
       renderFilters();
+      filteredProducts = allProducts.slice();
+    } else {
+      // On silent refresh, preserve the current filters
+      reapplyCurrentFilters();
     }
+    
     renderProducts();
 
     console.log("Products loaded:", allProducts.length, "available:", allProducts.filter(p => p.available).length);
