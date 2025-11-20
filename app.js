@@ -14,7 +14,7 @@ const typeList = [
   "casaco",
   "moletom",
   "saia",
-  "sapatos",
+  "sapato",
   "shorts",
   "vestido"
 ];
