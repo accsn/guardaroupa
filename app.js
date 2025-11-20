@@ -39,44 +39,22 @@ const checkoutForm = document.getElementById("checkout-form");
 const orderField = document.getElementById("order-field");
 const toast = document.getElementById("toast");
 
-/* ========== TOAST NOTIFICATION (MODAL) ========== */
-
-#toast {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: var(--orange);
-  color: var(--deep-brown);
-  padding: 2rem 2.5rem;
-  border-radius: 16px;
-  border: 4px solid var(--brown);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  font-weight: bold;
-  font-size: 1.3rem;
-  z-index: 5000;
-  text-align: center;
-  max-width: 85%;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-#toast.show {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, -50%) scale(1.05);
-}
-
-#toast::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: -1;
+// ---------- TOAST NOTIFICATION ----------
+function showToast(message, duration = 3000) {
+  if (!toast) return;
+  
+  // Scroll to top first
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  
+  // Small delay to let scroll happen
+  setTimeout(() => {
+    toast.textContent = message;
+    toast.classList.add("show");
+    
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, duration);
+  }, 200);
 }
 
 // ---------- LOAD PRODUCTS FROM APPS SCRIPT ----------
