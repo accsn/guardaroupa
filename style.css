@@ -432,6 +432,31 @@ form textarea {
   font-size: 0.95rem;
 }
 
+/* ========== TOAST NOTIFICATION ========== */
+
+#toast {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--orange);
+  color: var(--deep-brown);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  border: 3px solid var(--brown);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  font-size: 1.1rem;
+  z-index: 4000;
+  transition: top 0.4s ease;
+  text-align: center;
+  max-width: 90%;
+}
+
+#toast.show {
+  top: 20px;
+}
+
 /* ========== RESPONSIVE TWEAKS ========== */
 
 @media (max-width: 768px) {

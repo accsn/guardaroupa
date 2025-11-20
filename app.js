@@ -37,6 +37,19 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const checkoutForm = document.getElementById("checkout-form");
 const orderField = document.getElementById("order-field");
+const toast = document.getElementById("toast");
+
+// ---------- TOAST NOTIFICATION ----------
+function showToast(message, duration = 3000) {
+  if (!toast) return;
+  
+  toast.textContent = message;
+  toast.classList.add("show");
+  
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, duration);
+}
 
 // ---------- LOAD PRODUCTS FROM APPS SCRIPT ----------
 async function loadProducts(silent = false) {
@@ -458,12 +471,12 @@ if (checkoutForm) {
       document.body.appendChild(iframe);
     }
     
-    // Listen for iframe load to know when submission is complete
     iframe.onload = function() {
       console.log("Form submission completed!");
       
       setTimeout(() => {
-        confirm("Pedido enviado! Vou ver e te respondo 💛");
+        // Show custom toast notification
+        showToast("Pedido enviado! Vou ver e te respondo 💛", 4000);
         
         // Mark items as unavailable locally (optimistic update)
         productNames.forEach(name => {
@@ -486,7 +499,7 @@ if (checkoutForm) {
         setTimeout(() => {
           loadProducts(true);
         }, 2000);
-      }, 800);
+      }, 500);
     };
     
     // Mark products as unavailable via API
