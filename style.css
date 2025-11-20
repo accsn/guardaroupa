@@ -435,6 +435,7 @@ form textarea {
 /* ========== TOAST NOTIFICATION (MODAL) ========== */
 
 #toast {
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -450,18 +451,21 @@ form textarea {
   z-index: 5000;
   text-align: center;
   max-width: 85%;
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
 }
 
 #toast.show {
-  opacity: 1;
-  pointer-events: auto;
-  visibility: visible;
-  transform: translate(-50%, -50%) scale(1.05);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0s;
+  display: block;
+}
+
+#toast.show::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
 #toast.show::before {
