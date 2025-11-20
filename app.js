@@ -43,12 +43,18 @@ const toast = document.getElementById("toast");
 function showToast(message, duration = 3000) {
   if (!toast) return;
   
-  toast.textContent = message;
-  toast.classList.add("show");
+  // Scroll to top first
+  window.scrollTo({ top: 0, behavior: 'smooth' });
   
+  // Small delay to let scroll happen
   setTimeout(() => {
-    toast.classList.remove("show");
-  }, duration);
+    toast.textContent = message;
+    toast.classList.add("show");
+    
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, duration);
+  }, 200);
 }
 
 // ---------- LOAD PRODUCTS FROM APPS SCRIPT ----------
