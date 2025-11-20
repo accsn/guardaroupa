@@ -463,7 +463,7 @@ if (checkoutForm) {
       console.log("Form submission completed!");
       
       setTimeout(() => {
-        alert("Pedido enviado! Vou ver e te respondo 💛");
+        confirm("Pedido enviado! Vou ver e te respondo 💛");
         
         // Mark items as unavailable locally (optimistic update)
         productNames.forEach(name => {
@@ -486,7 +486,7 @@ if (checkoutForm) {
         setTimeout(() => {
           loadProducts(true);
         }, 2000);
-      }, 300);
+      }, 800);
     };
     
     // Mark products as unavailable via API
